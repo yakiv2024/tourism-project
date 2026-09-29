@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Туристичні напрямки</title>
+</head>
+<body>
+    <a href="#catalog">Перейти до каталогу</a>
+
+    <header>
+        <p>
+            <a href="#catalog">
+                <img src="images/logo.svg" width="40" height="40" alt="">
+                Світ Подорожей
+            </a>
+        </p>
+
+        <nav aria-label="Основна навігація">
+            <ul>
+                <li><a href="#catalog">Каталог</a></li>
+                <li><a href="#item">Напрямок</a></li>
+                <li><a href="#add">Додати напрямок</a></li>
+            </ul>
+        </nav>
+
+        <search>
+            <form action="#catalog" method="get" role="search">
+                <label for="search">Пошук напрямку</label>
+                <input 
+                  id="search" 
+                  name="q" 
+                  type="search" 
+                  placeholder="Пошук країни чи міста..." 
+                  maxlength="80"
+                >
+                <button type="submit">Знайти</button>
+            </form>
+        </search>
+    </header>
+
+    <main>
+        <section id="catalog" aria-labelledby="catalog-title">
+            <h1 id="catalog-title">Туристичні напрямки</h1>
+
+            <nav aria-label="Категорії каталогу">
+                <ul>
+                    <li><a href="#catalog" aria-current="page">Всі напрямки</a></li>
+                    <li><a href="#catalog">Європа</a></li>
+                    <li><a href="#catalog">Азія</a></li>
+                    <li><a href="#catalog">Північна Америка</a></li>
+                </ul>
+            </nav>
+
+            <form action="#catalog" method="get">
+                <label for="sort">Сортувати</label>
+                <select id="sort" name="sort">
+                    <option value="name" selected>за назвою</option>
+                    <option value="price-asc">за бюджетом: спочатку дешевші</option>
+                    <option value="price-desc">за бюджетом: спочатку дорожчі</option>
+                </select>
+                <button type="submit">Застосувати</button>
+            </form>
+
+            <ul>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Кіото, Японія</a>
+                        </h2>
+                        <p>
+                            <img src="images/kyoto.svg" width="320" height="210" alt="Осінній храм у Кіото">
+                        </p>
+                        <p>Регіон: Азія</p>
+                        <p>Найкращий сезон: <time datetime="2027-04">Квітень</time></p>
+                        <p>Денний бюджет: <data value="120">120$</data></p>
+                        <p>Місто тисячі храмів, де традиційна японська культура гармонійно поєднується з мальовничою природою.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Рим, Італія</a>
+                        </h2>
+                        <p>
+                            <img src="images/rome.svg" width="320" height="210" alt="Колізей у Римі">
+                        </p>
+                        <p>Регіон: Європа</p>
+                        <p>Найкращий сезон: <time datetime="2027-09">Вересень</time></p>
+                        <p>Денний бюджет: <data value="150">150$</data></p>
+                        <p>Вічне місто з неймовірною архітектурою, багатою історією та неперевершеною італійською кухнею.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Париж, Франція</a>
+                        </h2>
+                        <p>
+                            <img src="images/paris.svg" width="320" height="210" alt="Ейфелева вежа ввечері">
+                        </p>
+                        <p>Регіон: Європа</p>
+                        <p>Найкращий сезон: <time datetime="2027-05">Травень</time></p>
+                        <p>Денний бюджет: <data value="180">180$</data></p>
+                        <p>Столиця романтики, мистецтва та моди. Ідеальне місце для прогулянок вздовж Сени.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Балі, Індонезія</a>
+                        </h2>
+                        <p>
+                            <img src="images/bali.svg" width="320" height="210" alt="Рисові тераси на Балі">
+                        </p>
+                        <p>Регіон: Азія</p>
+                        <p>Найкращий сезон: <time datetime="2027-08">Серпень</time></p>
+                        <p>Денний бюджет: <data value="60">60$</data></p>
+                        <p>Тропічний рай з прекрасними пляжами, серфінгом та унікальними індуїстськими храмами.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Рейк'явік, Ісландія</a>
+                        </h2>
+                        <p>
+                            <img src="images/reykjavik.svg" width="320" height="210" alt="Північне сяйво над Рейк'явіком">
+                        </p>
+                        <p>Регіон: Європа</p>
+                        <p>Найкращий сезон: <time datetime="2027-02">Лютий</time></p>
+                        <p>Денний бюджет: <data value="200">200$</data></p>
+                        <p>Країна льодовиків, вулканів та гейзерів. Ідеально для любителів дикої природи.</p>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>
+                            <a href="#item">Нью-Йорк, США</a>
+                        </h2>
+                        <p>
+                            <img src="images/ny.svg" width="320" height="210" alt="Вигляд на Мангеттен">
+                        </p>
+                        <p>Регіон: Північна Америка</p>
+                        <p>Найкращий сезон: <time datetime="2027-10">Жовтень</time></p>
+                        <p>Денний бюджет: <data value="250">250$</data></p>
+                        <p>Мегаполіс, який ніколи не спить. Місто хмарочосів, бродвейських шоу та Центрального парку.</p>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section id="add" aria-labelledby="add-title">
+            <form action="#add" method="post">
+                <p>
+                    <label for="price">Денний бюджет, $</label>
+                    <input id="price" name="price" type="number" required min="1" max="9999" step="1" placeholder="150">
+                </p>
+
+                <p>
+                    <label for="season">Найкращий сезон</label>
+                    <input id="season" name="season" type="text" required maxlength="20" placeholder="Квітень" pattern="^[А-Яа-яІіЇїЄє]+$" title="Вкажіть місяць кирилицею">
+                </p>
+
+                <p>
+                    <label for="image">Посилання на зображення</label>
+                    <input id="image" name="image" type="url" maxlength="2048" placeholder="https://">
+                </p>
+
+                <p>
+                    <label for="description">Опис</label>
+                    <textarea id="description" name="description" required maxlength="300" rows="4" placeholder="Короткий опис туристичного напрямку"></textarea>
+                </p>
+
+                <fieldset>
+                    <p>
+                        <label>
+                            <input id="available" name="available" type="checkbox" checked>
+                            Відкрито для туристів
+                        </label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <button type="submit">Зберегти</button>
+                    <button type="reset">Скасувати</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <h2>Контактна інформація</h2>
+        <address>
+            <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
+        </address>
+        <p>&copy; 2026 Туристичні напрямки. Усі права захищено.</p>
+    </footer>
+</body>
+</html>
