@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туристичні напрямки</title>
+    <meta name="description" content="Каталог туристичних напрямків: планування подорожей, ціни та описи.">
 </head>
 <body>
     <a href="#catalog">Перейти до каталогу</a>
 
     <header>
         <p>
-            <a href="#catalog">
+            <a href="index.html">
                 <img src="images/logo.svg" width="40" height="40" alt="">
                 Світ Подорожей
             </a>
@@ -18,14 +19,13 @@
 
         <nav aria-label="Основна навігація">
             <ul>
-                <li><a href="#catalog">Каталог</a></li>
-                <li><a href="#item">Напрямок</a></li>
-                <li><a href="#add">Додати напрямок</a></li>
+                <li><a href="index.html" aria-current="page">Каталог</a></li>
+                <li><a href="about.html">Про проєкт</a></li>
             </ul>
         </nav>
 
         <search>
-            <form action="#catalog" method="get" role="search">
+            <form action="index.html" method="get" role="search">
                 <label for="search">Пошук напрямку</label>
                 <input 
                   id="search" 
@@ -66,7 +66,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Кіото, Японія</a>
+                            <a href="details.html">Кіото, Японія</a>
                         </h2>
                         <p>
                             <img src="images/kyoto-320w.jpg" 
@@ -85,7 +85,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Рим, Італія</a>
+                            <a href="details.html">Рим, Італія</a>
                         </h2>
                         <p>
                             <img src="images/rome-320w.jpg" 
@@ -104,7 +104,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Париж, Франція</a>
+                            <a href="details.html">Париж, Франція</a>
                         </h2>
                         <p>
                             <img src="images/paris-320w.jpg" 
@@ -123,7 +123,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Балі, Індонезія</a>
+                            <a href="details.html">Балі, Індонезія</a>
                         </h2>
                         <p>
                             <img src="images/bali-320w.jpg" 
@@ -142,7 +142,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Рейк'явік, Ісландія</a>
+                            <a href="details.html">Рейк'явік, Ісландія</a>
                         </h2>
                         <p>
                             <img src="images/reykjavik-320w.jpg" 
@@ -161,7 +161,7 @@
                 <li>
                     <article>
                         <h2>
-                            <a href="#item">Нью-Йорк, США</a>
+                            <a href="details.html">Нью-Йорк, США</a>
                         </h2>
                         <p>
                             <img src="images/ny-320w.jpg" 
@@ -181,6 +181,7 @@
         </section>
 
         <section id="add" aria-labelledby="add-title">
+            <h2 id="add-title">Додати напрямок</h2>
             <form action="#add" method="post">
                 <p>
                     <label for="price">Денний бюджет, $</label>
