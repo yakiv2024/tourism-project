@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кіото, Японія – Світ Подорожей</title>
+    <meta name="description" content="Детальна інформація про туристичний напрямок Кіото, Японія: бюджет, найкращий сезон, опис та орієнтовні витрати.">
+</head>
+<body>
+    <a href="#main-content">Перейти до основного вмісту</a>
+
+    <header>
+        <p>
+            <a href="index.html">
+                <img src="images/logo.svg" width="40" height="40" alt="">
+                Світ Подорожей
+            </a>
+        </p>
+
+        <nav aria-label="Основна навігація">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="details.html" aria-current="page">Напрямок</a></li>
+                <li><a href="about.html">Про проєкт</a></li>
+            </ul>
+        </nav>
+
+        <search>
+            <form action="index.html" method="get" role="search">
+                <label for="search">Пошук напрямку</label>
+                <input id="search" name="q" type="search" placeholder="Пошук країни чи міста..." maxlength="80">
+                <button type="submit">Знайти</button>
+            </form>
+        </search>
+    </header>
+
+    <main id="main-content">
+        <nav aria-label="Хлібні крихти">
+            <ol>
+                <li><a href="index.html">Каталог</a></li>
+                <li aria-current="page">Кіото, Японія</li>
+            </ol>
+        </nav>
+
+        <nav aria-label="На цій сторінці">
+            <p>На цій сторінці:</p>
+            <ul>
+                <li><a href="#overview">Загальний огляд</a></li>
+                <li><a href="#characteristics">Характеристики</a></li>
+                <li><a href="#expenses">Орієнтовні витрати</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Кіото, Японія</h1>
+            
+            <section id="overview" aria-labelledby="overview-title">
+                <h2 id="overview-title">Загальний огляд</h2>
+                
+                <figure>
+                    <picture>
+                        <source type="image/webp" srcset="images/kyoto-800w.webp">
+                        <img src="images/kyoto-800w.jpg" 
+                             width="800" height="533" 
+                             alt="Осінній храм у Кіото на тлі червоних кленів" 
+                             fetchpriority="high">
+                    </picture>
+                    <figcaption>Традиційний японський храм восени, Кіото</figcaption>
+                </figure>
+
+                <p><strong>Кіото</strong> — це місто, де оживає історія Японії. Воно відоме своїми численними класичними буддійськими храмами, садами, імператорськими палацами, синтоїстськими святилищами та традиційними дерев'яними будинками.</p>
+                <p>Однією з найпопулярніших атракцій є район <em>Гіон</em>, де й досі можна зустріти справжніх гейш. Це ідеальне місце для тих, хто шукає гармонію, красу природи та прагне зануритися в автентичну японську культуру.</p>
+            </section>
+
+            <section id="characteristics" aria-labelledby="characteristics-title">
+                <h2 id="characteristics-title">Характеристики</h2>
+                <dl>
+                    <dt>Регіон</dt>
+                    <dd>Азія</dd>
+                    
+                    <dt>Денний бюджет</dt>
+                    <dd><data value="120">120$</data></dd>
+                    
+                    <dt>Найкращий сезон</dt>
+                    <dd><time datetime="2027-04">Квітень (цвітіння сакури)</time></dd>
+                    
+                    <dt>Статус</dt>
+                    <dd>Відкрито для туристів</dd>
+                </dl>
+            </section>
+
+            <section id="expenses" aria-labelledby="expenses-title">
+                <h2 id="expenses-title">Орієнтовні витрати</h2>
+                <table>
+                    <caption>Орієнтовні витрати на день у Кіото (у доларах США)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Стаття витрат</th>
+                            <th scope="col">Економ (бюджетний)</th>
+                            <th scope="col">Комфорт (стандартний)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Проживання</th>
+                            <td><data value="30">30$</data></td>
+                            <td><data value="80">80$</data></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Харчування</th>
+                            <td><data value="20">20$</data></td>
+                            <td><data value="50">50$</data></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Транспорт і розваги</th>
+                            <td><data value="10">10$</data></td>
+                            <td><data value="30">30$</data></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <p><a href="index.html">Повернутися до каталогу</a></p>
+        </article>
+    </main>
+
+    <footer id="contacts">
+        <h2>Контактна інформація</h2>
+        <address>
+            <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
+        </address>
+        <p>&copy; 2026 Туристичні напрямки. Усі права захищено.</p>
+    </footer>
+</body>
+</html>
