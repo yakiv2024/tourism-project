@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про проєкт – Світ Подорожей</title>
+    <meta name="description" content="Мета туристичного каталогу, інструкція з використання та поширені запитання.">
+</head>
+<body>
+    <a href="#main-content">Перейти до основного вмісту</a>
+
+    <header>
+        <p>
+            <a href="index.html">
+                <img src="images/logo.svg" width="40" height="40" alt="">
+                Світ Подорожей
+            </a>
+        </p>
+
+        <nav aria-label="Основна навігація">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="about.html" aria-current="page">Про проєкт</a></li>
+            </ul>
+        </nav>
+
+        <search>
+            <form action="index.html" method="get" role="search">
+                <label for="search">Пошук напрямку</label>
+                <input id="search" name="q" type="search" placeholder="Пошук країни чи міста..." maxlength="80">
+                <button type="submit">Знайти</button>
+            </form>
+        </search>
+    </header>
+
+    <main id="main-content">
+        <h1>Про проєкт</h1>
+        <p>Каталог «Світ Подорожей» створено з метою зібрати в одному місці найбільш актуальну та структуровану інформацію про популярні туристичні напрямки для зручного планування ваших подорожей.</p>
+
+        <section aria-labelledby="instructions-title">
+            <h2 id="instructions-title">Як користуватися каталогом</h2>
+            <ol>
+                <li>Перейдіть на головну сторінку каталогу.</li>
+                <li>Скористайтеся формою пошуку для швидкого знаходження потрібного міста.</li>
+                <li>Натисніть на назву напрямку, щоб відкрити сторінку з детальним описом.</li>
+                <li>Ознайомтеся з орієнтовними витратами та характеристиками для планування бюджету.</li>
+            </ol>
+        </section>
+
+        <section aria-labelledby="features-title">
+            <h2 id="features-title">Можливості в наступних роботах</h2>
+            <ul>
+                <li>Динамічне завантаження турів за допомогою JavaScript.</li>
+                <li>Можливість залишати відгуки та оцінки напрямкам.</li>
+                <li>Особистий кабінет користувача зі збереженими турами.</li>
+                <li>Стилізація сторінок за допомогою каскадних таблиць стилів (CSS).</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="media-title">
+            <h2 id="media-title">Відеоогляд напрямку</h2>
+            <video controls width="640" height="360" preload="metadata" poster="media/preview.jpg">
+                <source src="media/review.webm" type="video/webm">
+                <source src="media/review.mp4" type="video/mp4">
+                <track kind="captions" src="media/review.uk.vtt" srclang="uk" label="Українська" default>
+                <p>Ваш браузер не підтримує відтворення відео. <a href="media/review.mp4">Завантажити відеофайл</a>.</p>
+            </video>
+        </section>
+
+        <section aria-labelledby="faq-title">
+            <h2 id="faq-title">Часті запитання (FAQ)</h2>
+            <details name="faq-accordion">
+                <summary>Чи актуальні ціни в таблицях?</summary>
+                <p>Ціни є орієнтовними та базуються на середніх показниках витрат туристів за минулий рік.</p>
+            </details>
+            <details name="faq-accordion">
+                <summary>Як додати свій напрямок у каталог?</summary>
+                <p>Наразі додавання доступне лише через форму на головній сторінці (демонстраційний режим).</p>
+            </details>
+            <details name="faq-accordion">
+                <summary>Чи потрібна реєстрація?</summary>
+                <p>Ні, перегляд каталогу абсолютно безкоштовний і не вимагає створення облікового запису.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <h2>Контактна інформація</h2>
+        <address>
+            <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
+        </address>
+        <p>&copy; 2026 Туристичні напрямки. Усі права захищено.</p>
+    </footer>
+</body>
+</html>
