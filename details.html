@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Детальна інформація про Кіото: опис, бюджет, характеристики та відгуки туристів.">
     <title>Кіото, Японія – Світ Подорожей</title>
-    <meta name="description" content="Детальна інформація про туристичний напрямок Кіото, Японія: бюджет, найкращий сезон, опис та орієнтовні витрати.">
+    <link rel="icon" href="favicon.ico" sizes="any">
 </head>
 <body>
     <a href="#main-content">Перейти до основного вмісту</a>
@@ -28,13 +29,16 @@
         <search>
             <form action="index.html" method="get" role="search">
                 <label for="search">Пошук напрямку</label>
-                <input id="search" name="q" type="search" placeholder="Пошук країни чи міста..." maxlength="80">
+                <input id="search" name="q" type="search"
+                       placeholder="Пошук країни чи міста..."
+                       maxlength="80">
                 <button type="submit">Знайти</button>
             </form>
         </search>
     </header>
 
     <main id="main-content">
+
         <nav aria-label="Хлібні крихти">
             <ol>
                 <li><a href="index.html">Каталог</a></li>
@@ -48,42 +52,68 @@
                 <li><a href="#overview">Загальний огляд</a></li>
                 <li><a href="#characteristics">Характеристики</a></li>
                 <li><a href="#expenses">Орієнтовні витрати</a></li>
+                <li><a href="#review">Відгук туриста</a></li>
             </ul>
         </nav>
 
         <article>
             <h1>Кіото, Японія</h1>
-            
+
             <section id="overview" aria-labelledby="overview-title">
                 <h2 id="overview-title">Загальний огляд</h2>
-                
+
                 <figure>
                     <picture>
-                        <source type="image/webp" srcset="images/kyoto-800w.webp">
-                        <img src="images/kyoto-800w.jpg" 
-                             width="800" height="533" 
-                             alt="Осінній храм у Кіото на тлі червоних кленів" 
+                        <source type="image/jpeg"
+                                srcset="images/kyoto-800w.jpg">
+
+                        <img src="images/kyoto-800w.jpg"
+                             width="800" height="533"
+                             alt="Осінній храм у Кіото на тлі червоних кленів"
                              fetchpriority="high">
                     </picture>
-                    <figcaption>Традиційний японський храм восени, Кіото</figcaption>
+
+                    <figcaption>
+                        Традиційний японський храм восени, Кіото
+                    </figcaption>
                 </figure>
 
-                <p><strong>Кіото</strong> — це місто, де оживає історія Японії. Воно відоме своїми численними класичними буддійськими храмами, садами, імператорськими палацами, синтоїстськими святилищами та традиційними дерев'яними будинками.</p>
-                <p>Однією з найпопулярніших атракцій є район <em>Гіон</em>, де й досі можна зустріти справжніх гейш. Це ідеальне місце для тих, хто шукає гармонію, красу природи та прагне зануритися в автентичну японську культуру.</p>
+                <p>
+                    <strong>Кіото</strong> — це місто, де оживає історія
+                    Японії. Воно відоме своїми численними класичними
+                    буддійськими храмами, садами, імператорськими
+                    палацами, синтоїстськими святилищами та
+                    традиційними дерев'яними будинками.
+                </p>
+
+                <p>
+                    Однією з найпопулярніших атракцій є район
+                    <em>Гіон</em>, де й досі можна зустріти справжніх
+                    гейш. Це ідеальне місце для тих, хто шукає
+                    гармонію, красу природи та прагне зануритися
+                    в автентичну японську культуру.
+                </p>
             </section>
 
-            <section id="characteristics" aria-labelledby="characteristics-title">
+            <section id="characteristics"
+                     aria-labelledby="characteristics-title">
+
                 <h2 id="characteristics-title">Характеристики</h2>
+
                 <dl>
                     <dt>Регіон</dt>
                     <dd>Азія</dd>
-                    
+
                     <dt>Денний бюджет</dt>
                     <dd><data value="120">120$</data></dd>
-                    
+
                     <dt>Найкращий сезон</dt>
-                    <dd><time datetime="2027-04">Квітень (цвітіння сакури)</time></dd>
-                    
+                    <dd>
+                        <time datetime="2027-04">
+                            Квітень (цвітіння сакури)
+                        </time>
+                    </dd>
+
                     <dt>Статус</dt>
                     <dd>Відкрито для туристів</dd>
                 </dl>
@@ -91,8 +121,13 @@
 
             <section id="expenses" aria-labelledby="expenses-title">
                 <h2 id="expenses-title">Орієнтовні витрати</h2>
+
                 <table>
-                    <caption>Орієнтовні витрати на день у Кіото (у доларах США)</caption>
+                    <caption>
+                        Орієнтовні витрати на день у Кіото
+                        (у доларах США)
+                    </caption>
+
                     <thead>
                         <tr>
                             <th scope="col">Стаття витрат</th>
@@ -100,17 +135,20 @@
                             <th scope="col">Комфорт (стандартний)</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr>
                             <th scope="row">Проживання</th>
                             <td><data value="30">30$</data></td>
                             <td><data value="80">80$</data></td>
                         </tr>
+
                         <tr>
                             <th scope="row">Харчування</th>
                             <td><data value="20">20$</data></td>
                             <td><data value="50">50$</data></td>
                         </tr>
+
                         <tr>
                             <th scope="row">Транспорт і розваги</th>
                             <td><data value="10">10$</data></td>
@@ -120,16 +158,186 @@
                 </table>
             </section>
 
-            <p><a href="index.html">Повернутися до каталогу</a></p>
+            <p>
+                <a href="index.html">Повернутися до каталогу</a>
+            </p>
         </article>
+
+        <section id="review" aria-labelledby="review-title">
+            <h2 id="review-title">Відгук туриста</h2>
+
+            <p>
+                Поділіться своїми враженнями від подорожі до Кіото.
+                Форма надсилається методом GET, тому введені дані
+                відображатимуться в адресному рядку браузера.
+                Це навчальна демонстрація без збереження відгуків.
+            </p>
+
+            <form id="review-form" action="details.html#review"
+                  method="get" autocomplete="on">
+
+                <p>
+                    <label for="review-author">Ім'я</label>
+
+                    <input id="review-author"
+                           name="authorName"
+                           type="text"
+                           autocomplete="name"
+                           minlength="2"
+                           maxlength="80">
+                </p>
+
+                <p>
+                    <label for="review-email">Електронна пошта</label>
+
+                    <input id="review-email"
+                           name="email"
+                           type="email"
+                           autocomplete="email"
+                           required
+                           maxlength="80">
+                </p>
+
+                <p>
+                    <label for="review-phone">Телефон</label>
+
+                    <input id="review-phone"
+                           name="phone"
+                           type="tel"
+                           autocomplete="tel"
+                           inputmode="tel"
+                           maxlength="13"
+                           pattern="\+380[0-9]{9}"
+                           aria-describedby="phone-hint">
+                </p>
+
+                <p id="phone-hint">
+                    Необов'язково. Формат: +380 і 9 цифр,
+                    наприклад +380501112233.
+                </p>
+
+                <fieldset>
+                    <legend>Оцінка подорожі</legend>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="rating"
+                                   value="1" required>
+                            1
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="rating" value="2">
+                            2
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="rating" value="3">
+                            3
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="rating" value="4">
+                            4
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="radio" name="rating" value="5">
+                            5
+                        </label>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <label for="trip-type">Тип подорожі</label>
+
+                    <input id="trip-type"
+                           name="tripType"
+                           type="text"
+                           list="trip-types"
+                           aria-describedby="trip-hint">
+
+                    <datalist id="trip-types">
+                        <option value="Самостійна">
+                        <option value="Сімейна">
+                        <option value="Групова">
+                        <option value="Екскурсійна">
+                    </datalist>
+                </p>
+
+                <p id="trip-hint">
+                    Виберіть запропонований тип подорожі
+                    або введіть власний.
+                </p>
+
+                <p>
+                    <label for="review-comment">Коментар</label>
+
+                    <textarea id="review-comment"
+                              name="comment"
+                              minlength="10"
+                              maxlength="500"
+                              rows="4"
+                              cols="40"
+                              aria-describedby="comment-hint"></textarea>
+                </p>
+
+                <p id="comment-hint">
+                    Необов'язково. Якщо залишаєте коментар,
+                    введіть від 10 до 500 символів.
+                </p>
+
+                <p>
+                    <label>
+                        <input id="review-consent"
+                               name="consent"
+                               type="checkbox"
+                               value="yes"
+                               required>
+                        Погоджуюся з правилами публікації відгуку
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Надіслати відгук</button>
+                </p>
+
+            </form>
+        </section>
+
     </main>
 
     <footer id="contacts">
         <h2>Контактна інформація</h2>
+
         <address>
-            <p>Розробник: Левадний Яків, група ІН-41/1</p>
-            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
+            <p>
+                Розробник: Левадний Яків, група ІН-41/1
+            </p>
+            <p>
+                Email:
+                <a href="mailto:yakivlevadniy@gmail.com">
+                    yakivlevadniy@gmail.com
+                </a>
+            </p>
         </address>
+
+        <nav aria-label="Навігація в підвалі">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="about.html">Про проєкт</a></li>
+                <li><a href="admin.html">Адміністрування</a></li>
+            </ul>
+        </nav>
+
         <p>&copy; 2026 Туристичні напрямки. Усі права захищено.</p>
     </footer>
 </body>
