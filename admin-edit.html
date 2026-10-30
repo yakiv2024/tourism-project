@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -5,56 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Редагування напрямку – Світ Подорожей</title>
     <meta name="description" content="Редагування туристичного напрямку Кіото.">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <a href="#main-content">Перейти до основного вмісту</a>
+    <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
 
-    <header>
-        <p>
-            <a href="index.html">
+    <header class="site-header">
+        <p class="site-header__brand">
+            <a href="index.html" class="site-header__logo">
                 <img src="images/logo.svg" width="40" height="40" alt="">
                 Світ Подорожей
             </a>
         </p>
 
-        <nav aria-label="Основна навігація">
-            <ul>
-                <li><a href="index.html">Каталог</a></li>
-                <li><a href="about.html">Про проєкт</a></li>
+        <nav class="site-nav" aria-label="Основна навігація">
+            <ul class="site-nav__list">
+                <li>
+                    <a href="index.html" class="site-nav__link">Каталог</a>
+                </li>
+                <li>
+                    <a href="about.html" class="site-nav__link">Про проєкт</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <nav aria-label="Хлібні крихти">
-            <ol>
-                <li><a href="index.html">Каталог</a></li>
-                <li><a href="admin.html">Адміністрування</a></li>
-                <li aria-current="page">Редагування</li>
+    <main id="main-content" class="page admin-edit">
+
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link">Каталог</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="admin.html" class="breadcrumbs__link">Адміністрування</a>
+                </li>
+                <li class="breadcrumbs__item" aria-current="page">
+                    Редагування
+                </li>
             </ol>
         </nav>
 
         <h1>Редагування туристичного напрямку</h1>
-        <p>Зміна даних напрямку Кіото, Японія.</p>
+        <p class="admin-edit__intro">
+            Зміна даних напрямку Кіото, Японія.
+        </p>
 
-        <form id="edit-form" action="admin-edit.html"
-              method="get" autocomplete="on">
+        <form id="edit-form"
+              action="admin-edit.html"
+              method="get"
+              autocomplete="on"
+              class="form">
 
             <input type="hidden" name="id" value="1">
 
-            <fieldset>
-                <legend>Основні дані</legend>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Основні дані</legend>
 
-                <p>
-                    <label for="title">Назва напрямку</label>
-                    <input type="text" id="title" name="title"
+                <p class="form__field">
+                    <label for="title" class="form__label">
+                        Назва напрямку
+                    </label>
+                    <input type="text"
+                           id="title"
+                           name="title"
+                           class="form__input"
                            value="Кіото, Японія"
-                           required minlength="3" maxlength="100">
+                           required
+                           minlength="3"
+                           maxlength="100">
                 </p>
 
-                <p>
-                    <label for="category">Регіон</label>
-                    <select id="category" name="category" required>
+                <p class="form__field">
+                    <label for="category" class="form__label">
+                        Регіон
+                    </label>
+                    <select id="category"
+                            name="category"
+                            class="form__input"
+                            required>
                         <option value="">Оберіть регіон</option>
                         <option value="europe">Європа</option>
                         <option value="asia" selected>Азія</option>
@@ -62,80 +92,126 @@
                     </select>
                 </p>
 
-                <p>
-                    <label for="price">Денний бюджет, $</label>
-                    <input type="number" id="price" name="price"
-                           value="120" required
-                           min="1" max="10000" step="1"
+                <p class="form__field">
+                    <label for="price" class="form__label">
+                        Денний бюджет, $
+                    </label>
+                    <input type="number"
+                           id="price"
+                           name="price"
+                           class="form__input"
+                           value="120"
+                           required
+                           min="1"
+                           max="10000"
+                           step="1"
                            aria-describedby="price-hint">
                 </p>
-                <p id="price-hint">
+
+                <p id="price-hint" class="form__hint">
                     Вкажіть бюджет від 1 до 10000 доларів.
                 </p>
 
-                <p>
-                    <label for="addedAt">Дата додавання</label>
-                    <input type="date" id="addedAt" name="addedAt"
+                <p class="form__field">
+                    <label for="addedAt" class="form__label">
+                        Дата додавання
+                    </label>
+                    <input type="date"
+                           id="addedAt"
+                           name="addedAt"
+                           class="form__input"
                            value="2026-10-15"
-                           required min="2024-01-01"
+                           required
+                           min="2024-01-01"
                            max="2027-12-31">
                 </p>
             </fieldset>
 
-            <fieldset>
-                <legend>Опис і доступність</legend>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">
+                    Опис і доступність
+                </legend>
 
-                <p>
-                    <label for="image">Посилання на зображення</label>
-                    <input type="url" id="image" name="image"
+                <p class="form__field">
+                    <label for="image" class="form__label">
+                        Посилання на зображення
+                    </label>
+                    <input type="url"
+                           id="image"
+                           name="image"
+                           class="form__input"
                            placeholder="https://example.com/photo.jpg"
                            aria-describedby="image-hint">
                 </p>
-                <p id="image-hint">
+
+                <p id="image-hint" class="form__hint">
                     Необов'язкове поле. Вкажіть повну URL-адресу фотографії.
                 </p>
 
-                <p>
-                    <label for="description">Опис напрямку</label>
-                    <textarea id="description" name="description"
-                              required minlength="10" maxlength="500"
-                              rows="4" cols="40">Кіото — стародавнє місто Японії, відоме своїми храмами, садами та традиційною культурою.</textarea>
+                <p class="form__field">
+                    <label for="description" class="form__label">
+                        Опис напрямку
+                    </label>
+                    <textarea id="description"
+                              name="description"
+                              class="form__input"
+                              required
+                              minlength="10"
+                              maxlength="500"
+                              rows="4"
+                              cols="40">Кіото — стародавнє місто Японії, відоме своїми храмами, садами та традиційною культурою.</textarea>
                 </p>
 
-                <p>
-                    <label>
-                        <input type="checkbox" id="inStock"
-                               name="inStock" value="true" checked>
+                <p class="form__field">
+                    <label class="form__choice">
+                        <input type="checkbox"
+                               id="inStock"
+                               name="inStock"
+                               value="true"
+                               class="form__checkbox"
+                               checked>
                         Доступний для туристів
                     </label>
                 </p>
             </fieldset>
 
-            <p>
-                <label for="item-code">Код напрямку</label>
-                <input type="text" id="item-code" name="itemCode"
+            <p class="form__field">
+                <label for="item-code" class="form__label">
+                    Код напрямку
+                </label>
+                <input type="text"
+                       id="item-code"
+                       name="itemCode"
+                       class="form__input"
                        value="JP-001"
                        pattern="[A-Z]{2}-[0-9]{3}"
                        maxlength="6"
                        aria-describedby="code-hint">
             </p>
-            <p id="code-hint">
+
+            <p id="code-hint" class="form__hint">
                 Формат: дві великі латинські літери,
                 дефіс і три цифри, наприклад JP-001.
             </p>
 
-            <p>
-                <button type="submit">Зберегти зміни</button>
-                <button type="reset">Відновити початкові значення</button>
+            <p class="form__actions">
+                <button type="submit" class="button button--primary">
+                    Зберегти зміни
+                </button>
+                <button type="reset" class="button button--secondary">
+                    Відновити початкові значення
+                </button>
             </p>
         </form>
 
-        <p>
-            <a href="admin.html">Повернутися до адміністрування</a>
+        <p class="admin-edit__back">
+            <a href="admin.html">
+                Повернутися до адміністрування
+            </a>
         </p>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <h2>Контактна інформація</h2>
         <address>
             <p>Розробник: Левадний Яків, група ІН-41/1</p>
@@ -143,7 +219,9 @@
         <p>
             <a href="admin.html">Адміністрування</a>
         </p>
-        <p>&copy; 2026 Світ Подорожей. Усі права захищено.</p>
+        <p class="site-footer__copy">
+            &copy; 2026 Світ Подорожей. Усі права захищено.
+        </p>
     </footer>
 </body>
 </html>

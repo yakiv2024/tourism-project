@@ -5,222 +5,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туристичні напрямки</title>
     <meta name="description" content="Каталог туристичних напрямків: планування подорожей, ціни та описи.">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <a href="#catalog">Перейти до каталогу</a>
+    <a href="#catalog" class="skip-link">Перейти до каталогу</a>
 
-    <header>
-        <p>
-            <a href="index.html">
+    <header class="site-header">
+        <p class="site-header__brand">
+            <a href="index.html" class="site-header__logo">
                 <img src="images/logo.svg" width="40" height="40" alt="">
                 Світ Подорожей
             </a>
         </p>
 
-        <nav aria-label="Основна навігація">
-            <ul>
-                <li><a href="index.html" aria-current="page">Каталог</a></li>
-                <li><a href="about.html">Про проєкт</a></li>
+        <nav class="site-nav" aria-label="Основна навігація">
+            <ul class="site-nav__list">
+                <li>
+                    <a href="index.html" class="site-nav__link" aria-current="page">Каталог</a>
+                </li>
+                <li>
+                    <a href="about.html" class="site-nav__link">Про проєкт</a>
+                </li>
             </ul>
         </nav>
 
-        <search>
-            <form action="index.html" method="get" role="search">
-                <label for="search">Пошук напрямку</label>
-                <input 
-                  id="search" 
-                  name="q" 
-                  type="search" 
-                  placeholder="Пошук країни чи міста..." 
-                  maxlength="80"
+        <search class="site-search">
+            <form action="index.html" method="get" role="search" class="site-search__form">
+                <label for="search" class="site-search__label">Пошук напрямку</label>
+                <input
+                    id="search"
+                    name="q"
+                    type="search"
+                    class="site-search__input"
+                    placeholder="Пошук країни чи міста..."
+                    maxlength="80"
                 >
-                <button type="submit">Знайти</button>
+                <button type="submit" class="button button--primary">Знайти</button>
             </form>
         </search>
     </header>
 
-    <main>
-        <section id="catalog" aria-labelledby="catalog-title">
+    <main class="page">
+        <section id="catalog" class="catalog" aria-labelledby="catalog-title">
             <h1 id="catalog-title">Туристичні напрямки</h1>
 
-            <nav aria-label="Категорії каталогу">
-                <ul>
-                    <li><a href="#catalog" aria-current="page">Всі напрямки</a></li>
-                    <li><a href="#catalog">Європа</a></li>
-                    <li><a href="#catalog">Азія</a></li>
-                    <li><a href="#catalog">Північна Америка</a></li>
+            <nav class="catalog-filters" aria-label="Категорії каталогу">
+                <ul class="catalog-filters__list">
+                    <li>
+                        <a href="#catalog" class="catalog-filters__link" aria-current="page">Всі напрямки</a>
+                    </li>
+                    <li>
+                        <a href="#catalog" class="catalog-filters__link">Європа</a>
+                    </li>
+                    <li>
+                        <a href="#catalog" class="catalog-filters__link">Азія</a>
+                    </li>
+                    <li>
+                        <a href="#catalog" class="catalog-filters__link">Північна Америка</a>
+                    </li>
                 </ul>
             </nav>
 
-            <form action="#catalog" method="get">
-                <label for="sort">Сортувати</label>
-                <select id="sort" name="sort">
+            <form action="#catalog" method="get" class="catalog-sort">
+                <label for="sort" class="catalog-sort__label">Сортувати</label>
+                <select id="sort" name="sort" class="catalog-sort__select">
                     <option value="name" selected>за назвою</option>
                     <option value="price-asc">за бюджетом: спочатку дешевші</option>
                     <option value="price-desc">за бюджетом: спочатку дорожчі</option>
                 </select>
-                <button type="submit">Застосувати</button>
+                <button type="submit" class="button button--secondary">Застосувати</button>
             </form>
 
-            <ul>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Кіото, Японія</a>
+            <ul class="catalog__list">
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Кіото, Японія</a>
                         </h2>
-                        <p>
-                            <img src="images/kyoto-320w.jpg" 
-                                 srcset="images/kyoto-320w.jpg 320w, images/kyoto-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Осінній храм у Кіото"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/kyoto-320w.jpg"
+                                srcset="images/kyoto-320w.jpg 320w, images/kyoto-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Осінній храм у Кіото"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Азія</p>
-                        <p>Найкращий сезон: <time datetime="2027-04">Квітень</time></p>
-                        <p>Денний бюджет: <data value="120">120$</data></p>
-                        <p>Місто тисячі храмів, де традиційна японська культура гармонійно поєднується з мальовничою природою.</p>
+
+                        <p class="card__region">Регіон: Азія</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-04">Квітень</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="120">120$</data></p>
+                        <p class="card__description">Місто тисячі храмів, де традиційна японська культура гармонійно поєднується з мальовничою природою.</p>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Рим, Італія</a>
+
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Рим, Італія</a>
                         </h2>
-                        <p>
-                            <img src="images/rome-320w.jpg" 
-                                 srcset="images/rome-320w.jpg 320w, images/rome-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Колізей у Римі"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/rome-320w.jpg"
+                                srcset="images/rome-320w.jpg 320w, images/rome-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Колізей у Римі"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Європа</p>
-                        <p>Найкращий сезон: <time datetime="2027-09">Вересень</time></p>
-                        <p>Денний бюджет: <data value="150">150$</data></p>
-                        <p>Вічне місто з неймовірною архітектурою, багатою історією та неперевершеною італійською кухнею.</p>
+
+                        <p class="card__region">Регіон: Європа</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-09">Вересень</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="150">150$</data></p>
+                        <p class="card__description">Вічне місто з неймовірною архітектурою, багатою історією та неперевершеною італійською кухнею.</p>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Париж, Франція</a>
+
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Париж, Франція</a>
                         </h2>
-                        <p>
-                            <img src="images/paris-320w.jpg" 
-                                 srcset="images/paris-320w.jpg 320w, images/paris-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Ейфелева вежа ввечері"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/paris-320w.jpg"
+                                srcset="images/paris-320w.jpg 320w, images/paris-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Ейфелева вежа ввечері"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Європа</p>
-                        <p>Найкращий сезон: <time datetime="2027-05">Травень</time></p>
-                        <p>Денний бюджет: <data value="180">180$</data></p>
-                        <p>Столиця романтики, мистецтва та моди. Ідеальне місце для прогулянок вздовж Сени.</p>
+
+                        <p class="card__region">Регіон: Європа</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-05">Травень</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="180">180$</data></p>
+                        <p class="card__description">Столиця романтики, мистецтва та моди. Ідеальне місце для прогулянок вздовж Сени.</p>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Балі, Індонезія</a>
+
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Балі, Індонезія</a>
                         </h2>
-                        <p>
-                            <img src="images/bali-320w.jpg" 
-                                 srcset="images/bali-320w.jpg 320w, images/bali-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Рисові тераси на Балі"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/bali-320w.jpg"
+                                srcset="images/bali-320w.jpg 320w, images/bali-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Рисові тераси на Балі"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Азія</p>
-                        <p>Найкращий сезон: <time datetime="2027-08">Серпень</time></p>
-                        <p>Денний бюджет: <data value="60">60$</data></p>
-                        <p>Тропічний рай з прекрасними пляжами, серфінгом та унікальними індуїстськими храмами.</p>
+
+                        <p class="card__region">Регіон: Азія</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-08">Серпень</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="60">60$</data></p>
+                        <p class="card__description">Тропічний рай з прекрасними пляжами, серфінгом та унікальними індуїстськими храмами.</p>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Рейк'явік, Ісландія</a>
+
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Рейк'явік, Ісландія</a>
                         </h2>
-                        <p>
-                            <img src="images/reykjavik-320w.jpg" 
-                                 srcset="images/reykjavik-320w.jpg 320w, images/reykjavik-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Північне сяйво над Рейк'явіком"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/reykjavik-320w.jpg"
+                                srcset="images/reykjavik-320w.jpg 320w, images/reykjavik-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Північне сяйво над Рейк'явіком"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Європа</p>
-                        <p>Найкращий сезон: <time datetime="2027-02">Лютий</time></p>
-                        <p>Денний бюджет: <data value="200">200$</data></p>
-                        <p>Країна льодовиків, вулканів та гейзерів. Ідеально для любителів дикої природи.</p>
+
+                        <p class="card__region">Регіон: Європа</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-02">Лютий</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="200">200$</data></p>
+                        <p class="card__description">Країна льодовиків, вулканів та гейзерів. Ідеально для любителів дикої природи.</p>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h2>
-                            <a href="details.html">Нью-Йорк, США</a>
+
+                <li class="catalog__item">
+                    <article class="card">
+                        <h2 class="card__title">
+                            <a href="details.html" class="card__title-link">Нью-Йорк, США</a>
                         </h2>
-                        <p>
-                            <img src="images/ny-320w.jpg" 
-                                 srcset="images/ny-320w.jpg 320w, images/ny-800w.jpg 800w" 
-                                 sizes="(max-width: 600px) 320px, 800px" 
-                                 width="320" height="210" 
-                                 alt="Вигляд на Мангеттен"
-                                 loading="lazy">
+
+                        <p class="card__media">
+                            <img
+                                src="images/ny-320w.jpg"
+                                srcset="images/ny-320w.jpg 320w, images/ny-800w.jpg 800w"
+                                sizes="(max-width: 600px) 320px, 800px"
+                                width="320"
+                                height="210"
+                                alt="Вигляд на Мангеттен"
+                                loading="lazy"
+                            >
                         </p>
-                        <p>Регіон: Північна Америка</p>
-                        <p>Найкращий сезон: <time datetime="2027-10">Жовтень</time></p>
-                        <p>Денний бюджет: <data value="250">250$</data></p>
-                        <p>Мегаполіс, який ніколи не спить. Місто хмарочосів, бродвейських шоу та Центрального парку.</p>
+
+                        <p class="card__region">Регіон: Північна Америка</p>
+                        <p class="card__badge">Найкращий сезон: <time datetime="2027-10">Жовтень</time></p>
+                        <p class="card__meta">Денний бюджет: <data class="card__price" value="250">250$</data></p>
+                        <p class="card__description">Мегаполіс, який ніколи не спить. Місто хмарочосів, бродвейських шоу та Центрального парку.</p>
                     </article>
                 </li>
             </ul>
         </section>
 
-        <section id="add" aria-labelledby="add-title">
+        <section id="add" class="catalog-add" aria-labelledby="add-title">
             <h2 id="add-title">Додати напрямок</h2>
-            <form action="#add" method="post">
-                <p>
-                    <label for="price">Денний бюджет, $</label>
-                    <input id="price" name="price" type="number" required min="1" max="9999" step="1" placeholder="150">
+
+            <form action="#add" method="post" class="form">
+                <p class="form__field">
+                    <label for="price" class="form__label">Денний бюджет, $</label>
+                    <input
+                        id="price"
+                        name="price"
+                        type="number"
+                        class="form__input"
+                        required
+                        min="1"
+                        max="9999"
+                        step="1"
+                        placeholder="150"
+                    >
                 </p>
 
-                <p>
-                    <label for="season">Найкращий сезон</label>
-                    <input id="season" name="season" type="text" required maxlength="20" placeholder="Квітень" pattern="^[А-Яа-яІіЇїЄє]+$" title="Вкажіть місяць кирилицею">
+                <p class="form__field">
+                    <label for="season" class="form__label">Найкращий сезон</label>
+                    <input
+                        id="season"
+                        name="season"
+                        type="text"
+                        class="form__input"
+                        required
+                        maxlength="20"
+                        placeholder="Квітень"
+                        pattern="^[А-Яа-яІіЇїЄє]+$"
+                        title="Вкажіть місяць кирилицею"
+                    >
                 </p>
 
-                <p>
-                    <label for="image">Посилання на зображення</label>
-                    <input id="image" name="image" type="url" maxlength="2048" placeholder="https://">
+                <p class="form__field">
+                    <label for="image" class="form__label">Посилання на зображення</label>
+                    <input
+                        id="image"
+                        name="image"
+                        type="url"
+                        class="form__input"
+                        maxlength="2048"
+                        placeholder="https://"
+                    >
                 </p>
 
-                <p>
-                    <label for="description">Опис</label>
-                    <textarea id="description" name="description" required maxlength="300" rows="4" placeholder="Короткий опис туристичного напрямку"></textarea>
+                <p class="form__field">
+                    <label for="description" class="form__label">Опис</label>
+                    <textarea
+                        id="description"
+                        name="description"
+                        class="form__input"
+                        required
+                        maxlength="300"
+                        rows="4"
+                        placeholder="Короткий опис туристичного напрямку"
+                    ></textarea>
                 </p>
 
-                <fieldset>
-                    <p>
-                        <label>
-                            <input id="available" name="available" type="checkbox" checked>
+                <fieldset class="form__fieldset">
+                    <p class="form__field">
+                        <label class="form__checkbox-label">
+                            <input
+                                id="available"
+                                name="available"
+                                type="checkbox"
+                                class="form__checkbox"
+                                checked
+                            >
                             Відкрито для туристів
                         </label>
                     </p>
                 </fieldset>
 
-                <p>
-                    <button type="submit">Зберегти</button>
-                    <button type="reset">Скасувати</button>
+                <p class="form__actions">
+                    <button type="submit" class="button button--primary">Зберегти</button>
+                    <button type="reset" class="button">Скасувати</button>
                 </p>
             </form>
         </section>
     </main>
 
-    <footer id="contacts">
+    <footer id="contacts" class="site-footer">
         <h2>Контактна інформація</h2>
         <address>
             <p>Розробник: Левадний Яків, група ІН-41/1</p>

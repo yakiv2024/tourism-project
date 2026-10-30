@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -6,140 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адміністрування – Світ Подорожей</title>
     <meta name="description" content="Адміністрування каталогу туристичних напрямків.">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <a href="#main-content">Перейти до основного вмісту</a>
+    <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
 
-    <header>
-        <p>
-            <a href="index.html">
+    <header class="site-header">
+        <p class="site-header__brand">
+            <a href="index.html" class="site-header__logo">
                 <img src="images/logo.svg" width="40" height="40" alt="">
                 Світ Подорожей
             </a>
         </p>
 
-        <nav aria-label="Основна навігація">
-            <ul>
-                <li><a href="index.html">Каталог</a></li>
-                <li><a href="about.html">Про проєкт</a></li>
+        <nav class="site-nav" aria-label="Основна навігація">
+            <ul class="site-nav__list">
+                <li><a href="index.html" class="site-nav__link">Каталог</a></li>
+                <li><a href="about.html" class="site-nav__link">Про проєкт</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" class="page admin">
         <h1>Адміністрування туристичних напрямків</h1>
 
-        <p>
-            Ця сторінка є навчальною імітацією адміністративного
-            інтерфейсу. Збереження даних та обмеження доступу
-            потребують серверної частини.
+        <p class="admin__intro">
+            Ця сторінка є навчальною імітацією адміністративного інтерфейсу.
+            Збереження даних та обмеження доступу потребують серверної частини.
         </p>
 
-        <section aria-labelledby="catalog-title">
+        <section class="admin__section" aria-labelledby="catalog-title">
             <h2 id="catalog-title">Напрямки каталогу</h2>
 
-            <table>
-                <caption>Список туристичних напрямків</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Назва</th>
-                        <th scope="col">Регіон</th>
-                        <th scope="col">Денний бюджет, $</th>
-                        <th scope="col">Доступність</th>
-                        <th scope="col">Дії</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Кіото, Японія</th>
-                        <td>Азія</td>
-                        <td>120</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Кіото
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Рим, Італія</th>
-                        <td>Європа</td>
-                        <td>150</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Рим
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Париж, Франція</th>
-                        <td>Європа</td>
-                        <td>180</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Париж
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Балі, Індонезія</th>
-                        <td>Азія</td>
-                        <td>60</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Балі
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Рейк'явік, Ісландія</th>
-                        <td>Європа</td>
-                        <td>200</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Рейк'явік
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Нью-Йорк, США</th>
-                        <td>Північна Америка</td>
-                        <td>250</td>
-                        <td>Доступний</td>
-                        <td>
-                            <a href="admin-edit.html">
-                                Редагувати Нью-Йорк
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <caption>Список туристичних напрямків</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Назва</th>
+                            <th scope="col">Регіон</th>
+                            <th scope="col">Денний бюджет, $</th>
+                            <th scope="col">Доступність</th>
+                            <th scope="col">Дії</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Кіото, Японія</th>
+                            <td>Азія</td>
+                            <td class="data-table__number">120</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Рим, Італія</th>
+                            <td>Європа</td>
+                            <td class="data-table__number">150</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Париж, Франція</th>
+                            <td>Європа</td>
+                            <td class="data-table__number">180</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Балі, Індонезія</th>
+                            <td>Азія</td>
+                            <td class="data-table__number">60</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Рейк'явік, Ісландія</th>
+                            <td>Європа</td>
+                            <td class="data-table__number">200</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Нью-Йорк, США</th>
+                            <td>Північна Америка</td>
+                            <td class="data-table__number">250</td>
+                            <td><span class="status status--available">Доступний</span></td>
+                            <td><a href="admin-edit.html" class="button button--secondary">Редагувати</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section aria-labelledby="add-title">
+        <section class="admin__section" aria-labelledby="add-title">
             <h2 id="add-title">Додати туристичний напрямок</h2>
 
-            <form id="item-form" action="admin.html"
-                  method="get" autocomplete="on">
+            <form id="item-form" class="form"
+                  action="admin.html" method="get" autocomplete="on">
 
-                <fieldset>
-                    <legend>Основні дані</legend>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Основні дані</legend>
 
-                    <p>
-                        <label for="title">Назва напрямку</label>
-                        <input type="text" id="title" name="title"
-                               required minlength="3" maxlength="100"
-                               autocomplete="off"
-                               placeholder="Київ, Україна">
+                    <p class="form__field">
+                        <label class="form__label" for="title">Назва напрямку</label>
+                        <input class="form__input" id="title" name="title"
+                               type="text" required minlength="3" maxlength="100"
+                               autocomplete="off" placeholder="Київ, Україна">
                     </p>
 
-                    <p>
-                        <label for="category">Регіон</label>
-                        <select id="category" name="category" required>
+                    <p class="form__field">
+                        <label class="form__label" for="category">Регіон</label>
+                        <select class="form__input" id="category" name="category" required>
                             <option value="">Оберіть регіон</option>
                             <option value="europe">Європа</option>
                             <option value="asia">Азія</option>
@@ -147,91 +123,89 @@
                         </select>
                     </p>
 
-                    <p>
-                        <label for="price">Денний бюджет, $</label>
-                        <input type="number" id="price" name="price"
-                               required min="1" max="10000" step="1"
-                               aria-describedby="price-hint">
+                    <p class="form__field">
+                        <label class="form__label" for="price">Денний бюджет, $</label>
+                        <input class="form__input" id="price" name="price"
+                               type="number" required min="1" max="10000"
+                               step="1" aria-describedby="price-hint">
                     </p>
-                    <p id="price-hint">
+                    <p id="price-hint" class="form__hint">
                         Вкажіть бюджет від 1 до 10000 доларів.
                     </p>
 
-                    <p>
-                        <label for="addedAt">Дата додавання</label>
-                        <input type="date" id="addedAt" name="addedAt"
-                               required min="2024-01-01" max="2027-12-31">
+                    <p class="form__field">
+                        <label class="form__label" for="addedAt">Дата додавання</label>
+                        <input class="form__input" id="addedAt" name="addedAt"
+                               type="date" required
+                               min="2024-01-01" max="2027-12-31">
                     </p>
                 </fieldset>
 
-                <fieldset>
-                    <legend>Опис і доступність</legend>
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Опис і доступність</legend>
 
-                    <p>
-                        <label for="image">Посилання на зображення</label>
-                        <input type="url" id="image" name="image"
+                    <p class="form__field">
+                        <label class="form__label" for="image">Посилання на зображення</label>
+                        <input class="form__input" id="image" name="image"
+                               type="url"
                                placeholder="https://example.com/photo.jpg"
                                aria-describedby="image-hint">
                     </p>
-
-                    <p id="image-hint">
+                    <p id="image-hint" class="form__hint">
                         Необов'язкове поле. Вкажіть повну URL-адресу фотографії.
                     </p>
 
-                    <p>
-                        <label for="description">Опис напрямку</label>
-                        <textarea id="description" name="description"
-                                  required minlength="10" maxlength="500"
-                                  rows="4" cols="40"
-                                  aria-describedby="description-hint"></textarea>
+                    <p class="form__field">
+                        <label class="form__label" for="description">Опис напрямку</label>
+                        <textarea class="form__input" id="description"
+                                  name="description" required minlength="10"
+                                  maxlength="500" rows="4" cols="40"></textarea>
                     </p>
 
-                    <p id="description-hint">
-                        Введіть опис від 10 до 500 символів.
-                    </p>
-
-                    <p>
-                        <label>
-                            <input type="checkbox" id="inStock"
-                                   name="inStock" value="true">
+                    <p class="form__field">
+                        <label class="form__choice">
+                            <input class="form__checkbox" id="inStock"
+                                   name="inStock" type="checkbox" value="true" checked>
                             Доступний для туристів
                         </label>
                     </p>
                 </fieldset>
 
-                <p>
-                    <label for="item-code">Код напрямку</label>
-                    <input type="text" id="item-code" name="itemCode"
-                           pattern="[A-Z]{2}-[0-9]{3}"
-                           maxlength="6"
-                           placeholder="UA-001"
-                           aria-describedby="code-hint">
+                <p class="form__field">
+                    <label class="form__label" for="item-code">Код напрямку</label>
+                    <input class="form__input" id="item-code" name="itemCode"
+                           type="text" pattern="[A-Z]{2}-[0-9]{3}"
+                           maxlength="6" aria-describedby="code-hint"
+                           placeholder="JP-001">
+                </p>
+                <p id="code-hint" class="form__hint">
+                    Формат: дві великі латинські літери,
+                    дефіс і три цифри, наприклад JP-001.
                 </p>
 
-                <p id="code-hint">
-                    Необов'язково. Формат: дві великі латинські
-                    літери, дефіс і три цифри, наприклад UA-001.
-                </p>
-
-                <p>
-                    <button type="submit">Додати</button>
-                    <button type="reset">Очистити</button>
+                <p class="form__actions">
+                    <button class="button button--primary" type="submit">Додати</button>
+                    <button class="button button--secondary" type="reset">Очистити</button>
                 </p>
             </form>
         </section>
     </main>
 
-    <footer>
+    <footer id="contacts" class="site-footer">
         <h2>Контактна інформація</h2>
         <address>
             <p>Розробник: Левадний Яків, група ІН-41/1</p>
         </address>
-        <p>
-            <a href="admin.html" aria-current="page">
-                Адміністрування
-            </a>
+        <nav aria-label="Навігація в підвалі">
+            <ul class="site-footer__list">
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="about.html">Про проєкт</a></li>
+                <li><a href="admin.html" aria-current="page">Адміністрування</a></li>
+            </ul>
+        </nav>
+        <p class="site-footer__copy">
+            &copy; 2026 Світ Подорожей. Усі права захищено.
         </p>
-        <p>&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
