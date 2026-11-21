@@ -918,3 +918,80 @@
         white-space: nowrap;
     }
 }
+
+/* ЛР6. Компонування засобами Flexbox (шар components) */
+@layer components {
+
+    /* Шапка: назва, навігація, пошук в один рядок з перенесенням */
+    .site-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-s) var(--space-l);
+    }
+
+    .site-header__brand {
+        flex: none;
+        margin: 0;
+    }
+
+    .site-search {
+        flex: 0 1 28rem;
+        margin-inline-start: auto;
+        min-inline-size: 0;
+    }
+
+    .site-search__form {
+        margin-top: 0;
+    }
+
+    .site-search__input {
+        flex: 1 1 10rem;
+        min-inline-size: 0;
+    }
+
+    .site-nav__list {
+        align-items: center;
+    }
+
+    /* Хлібні крихти: ряд із перенесенням, роздільник усередині пункту */
+    .breadcrumbs__list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-xs) var(--space-s);
+    }
+
+    .breadcrumbs__item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-s);
+    }
+
+    .breadcrumbs__item + .breadcrumbs__item::before {
+        margin: 0;
+    }
+
+    /* Підвал: блоки в рядок із перенесенням */
+    .site-footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: var(--space-m) var(--space-l);
+    }
+
+    .site-footer__title,
+    .site-footer__copy {
+        flex-basis: 100%;
+        margin: 0;
+    }
+
+    .site-footer__contacts p {
+        margin: 0 0 var(--space-xs);
+    }
+
+    .site-footer__list {
+        margin: 0;
+    }
+}

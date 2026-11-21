@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туристичні напрямки</title>
     <meta name="description" content="Каталог туристичних напрямків: планування подорожей, ціни та описи.">
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <a href="#catalog" class="skip-link">Перейти до каталогу</a>
-
+ 
     <header class="site-header">
         <p class="site-header__brand">
             <a href="index.html" class="site-header__logo">
@@ -17,7 +18,7 @@
                 Світ Подорожей
             </a>
         </p>
-
+ 
         <nav class="site-nav" aria-label="Основна навігація">
             <ul class="site-nav__list">
                 <li>
@@ -28,7 +29,7 @@
                 </li>
             </ul>
         </nav>
-
+ 
         <search class="site-search">
             <form action="index.html" method="get" role="search" class="site-search__form">
                 <label for="search" class="site-search__label">Пошук напрямку</label>
@@ -44,11 +45,11 @@
             </form>
         </search>
     </header>
-
+ 
     <main class="page">
         <section id="catalog" class="catalog" aria-labelledby="catalog-title">
             <h1 id="catalog-title">Туристичні напрямки</h1>
-
+ 
             <nav class="catalog-filters" aria-label="Категорії каталогу">
                 <ul class="catalog-filters__list">
                     <li>
@@ -65,7 +66,7 @@
                     </li>
                 </ul>
             </nav>
-
+ 
             <form action="#catalog" method="get" class="catalog-sort">
                 <label for="sort" class="catalog-sort__label">Сортувати</label>
                 <select id="sort" name="sort" class="catalog-sort__select">
@@ -75,14 +76,14 @@
                 </select>
                 <button type="submit" class="button button--secondary">Застосувати</button>
             </form>
-
+ 
             <ul class="catalog__list">
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Кіото, Японія</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/kyoto-320w.jpg"
@@ -94,20 +95,20 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Азія</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-04">Квітень</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="120">120$</data></p>
                         <p class="card__description">Місто тисячі храмів, де традиційна японська культура гармонійно поєднується з мальовничою природою.</p>
                     </article>
                 </li>
-
+ 
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Рим, Італія</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/rome-320w.jpg"
@@ -119,20 +120,20 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Європа</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-09">Вересень</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="150">150$</data></p>
                         <p class="card__description">Вічне місто з неймовірною архітектурою, багатою історією та неперевершеною італійською кухнею.</p>
                     </article>
                 </li>
-
+ 
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Париж, Франція</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/paris-320w.jpg"
@@ -144,20 +145,20 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Європа</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-05">Травень</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="180">180$</data></p>
                         <p class="card__description">Столиця романтики, мистецтва та моди. Ідеальне місце для прогулянок вздовж Сени.</p>
                     </article>
                 </li>
-
+ 
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Балі, Індонезія</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/bali-320w.jpg"
@@ -169,20 +170,20 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Азія</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-08">Серпень</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="60">60$</data></p>
                         <p class="card__description">Тропічний рай з прекрасними пляжами, серфінгом та унікальними індуїстськими храмами.</p>
                     </article>
                 </li>
-
+ 
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Рейк'явік, Ісландія</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/reykjavik-320w.jpg"
@@ -194,20 +195,20 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Європа</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-02">Лютий</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="200">200$</data></p>
                         <p class="card__description">Країна льодовиків, вулканів та гейзерів. Ідеально для любителів дикої природи.</p>
                     </article>
                 </li>
-
+ 
                 <li class="catalog__item">
                     <article class="card">
                         <h2 class="card__title">
                             <a href="details.html" class="card__title-link">Нью-Йорк, США</a>
                         </h2>
-
+ 
                         <p class="card__media">
                             <img
                                 src="images/ny-320w.jpg"
@@ -219,7 +220,7 @@
                                 loading="lazy"
                             >
                         </p>
-
+ 
                         <p class="card__region">Регіон: Північна Америка</p>
                         <p class="card__badge">Найкращий сезон: <time datetime="2027-10">Жовтень</time></p>
                         <p class="card__meta">Денний бюджет: <data class="card__price" value="250">250$</data></p>
@@ -228,10 +229,10 @@
                 </li>
             </ul>
         </section>
-
+ 
         <section id="add" class="catalog-add" aria-labelledby="add-title">
             <h2 id="add-title">Додати напрямок</h2>
-
+ 
             <form action="#add" method="post" class="form">
                 <p class="form__field">
                     <label for="price" class="form__label">Денний бюджет, $</label>
@@ -247,7 +248,7 @@
                         placeholder="150"
                     >
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="season" class="form__label">Найкращий сезон</label>
                     <input
@@ -262,7 +263,7 @@
                         title="Вкажіть місяць кирилицею"
                     >
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="image" class="form__label">Посилання на зображення</label>
                     <input
@@ -274,7 +275,7 @@
                         placeholder="https://"
                     >
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="description" class="form__label">Опис</label>
                     <textarea
@@ -287,7 +288,7 @@
                         placeholder="Короткий опис туристичного напрямку"
                     ></textarea>
                 </p>
-
+ 
                 <fieldset class="form__fieldset">
                     <p class="form__field">
                         <label class="form__checkbox-label">
@@ -302,7 +303,7 @@
                         </label>
                     </p>
                 </fieldset>
-
+ 
                 <p class="form__actions">
                     <button type="submit" class="button button--primary">Зберегти</button>
                     <button type="reset" class="button">Скасувати</button>
@@ -310,14 +311,25 @@
             </form>
         </section>
     </main>
-
+ 
     <footer id="contacts" class="site-footer">
-        <h2>Контактна інформація</h2>
-        <address>
+        <h2 class="site-footer__title">Контактна інформація</h2>
+ 
+        <address class="site-footer__contacts">
             <p>Розробник: Левадний Яків, група ІН-41/1</p>
             <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
         </address>
-        <p>&copy; 2026 Туристичні напрямки. Усі права захищено.</p>
+ 
+        <nav class="site-footer__nav" aria-label="Навігація в підвалі">
+            <ul class="site-footer__list">
+                <li><a href="index.html" class="site-footer__link" aria-current="page">Каталог</a></li>
+                <li><a href="about.html" class="site-footer__link">Про проєкт</a></li>
+                <li><a href="admin.html" class="site-footer__link">Адміністрування</a></li>
+            </ul>
+        </nav>
+ 
+        <p class="site-footer__copy">&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
+ 

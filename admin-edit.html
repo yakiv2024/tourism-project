@@ -1,4 +1,4 @@
-
+ 
 <!DOCTYPE html>
 <html lang="uk">
 <head>
@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Редагування напрямку – Світ Подорожей</title>
     <meta name="description" content="Редагування туристичного напрямку Кіото.">
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
-
+ 
     <header class="site-header">
         <p class="site-header__brand">
             <a href="index.html" class="site-header__logo">
@@ -18,7 +19,7 @@
                 Світ Подорожей
             </a>
         </p>
-
+ 
         <nav class="site-nav" aria-label="Основна навігація">
             <ul class="site-nav__list">
                 <li>
@@ -29,10 +30,25 @@
                 </li>
             </ul>
         </nav>
+ 
+        <search class="site-search">
+            <form action="index.html" method="get" role="search" class="site-search__form">
+                <label for="search" class="site-search__label">Пошук напрямку</label>
+                <input
+                    id="search"
+                    name="q"
+                    type="search"
+                    class="site-search__input"
+                    placeholder="Пошук країни чи міста..."
+                    maxlength="80"
+                >
+                <button type="submit" class="button button--primary">Знайти</button>
+            </form>
+        </search>
     </header>
-
+ 
     <main id="main-content" class="page admin-edit">
-
+ 
         <nav class="breadcrumbs" aria-label="Хлібні крихти">
             <ol class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -46,23 +62,23 @@
                 </li>
             </ol>
         </nav>
-
+ 
         <h1>Редагування туристичного напрямку</h1>
         <p class="admin-edit__intro">
             Зміна даних напрямку Кіото, Японія.
         </p>
-
+ 
         <form id="edit-form"
               action="admin-edit.html"
               method="get"
               autocomplete="on"
               class="form">
-
+ 
             <input type="hidden" name="id" value="1">
-
+ 
             <fieldset class="form__fieldset">
                 <legend class="form__legend">Основні дані</legend>
-
+ 
                 <p class="form__field">
                     <label for="title" class="form__label">
                         Назва напрямку
@@ -76,7 +92,7 @@
                            minlength="3"
                            maxlength="100">
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="category" class="form__label">
                         Регіон
@@ -91,7 +107,7 @@
                         <option value="north-america">Північна Америка</option>
                     </select>
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="price" class="form__label">
                         Денний бюджет, $
@@ -107,11 +123,11 @@
                            step="1"
                            aria-describedby="price-hint">
                 </p>
-
+ 
                 <p id="price-hint" class="form__hint">
                     Вкажіть бюджет від 1 до 10000 доларів.
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="addedAt" class="form__label">
                         Дата додавання
@@ -126,12 +142,12 @@
                            max="2027-12-31">
                 </p>
             </fieldset>
-
+ 
             <fieldset class="form__fieldset">
                 <legend class="form__legend">
                     Опис і доступність
                 </legend>
-
+ 
                 <p class="form__field">
                     <label for="image" class="form__label">
                         Посилання на зображення
@@ -143,11 +159,11 @@
                            placeholder="https://example.com/photo.jpg"
                            aria-describedby="image-hint">
                 </p>
-
+ 
                 <p id="image-hint" class="form__hint">
                     Необов'язкове поле. Вкажіть повну URL-адресу фотографії.
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="description" class="form__label">
                         Опис напрямку
@@ -161,7 +177,7 @@
                               rows="4"
                               cols="40">Кіото — стародавнє місто Японії, відоме своїми храмами, садами та традиційною культурою.</textarea>
                 </p>
-
+ 
                 <p class="form__field">
                     <label class="form__choice">
                         <input type="checkbox"
@@ -174,7 +190,7 @@
                     </label>
                 </p>
             </fieldset>
-
+ 
             <p class="form__field">
                 <label for="item-code" class="form__label">
                     Код напрямку
@@ -188,12 +204,12 @@
                        maxlength="6"
                        aria-describedby="code-hint">
             </p>
-
+ 
             <p id="code-hint" class="form__hint">
                 Формат: дві великі латинські літери,
                 дефіс і три цифри, наприклад JP-001.
             </p>
-
+ 
             <p class="form__actions">
                 <button type="submit" class="button button--primary">
                     Зберегти зміни
@@ -203,25 +219,32 @@
                 </button>
             </p>
         </form>
-
+ 
         <p class="admin-edit__back">
             <a href="admin.html">
                 Повернутися до адміністрування
             </a>
         </p>
     </main>
-
-    <footer class="site-footer">
-        <h2>Контактна інформація</h2>
-        <address>
+ 
+    <footer id="contacts" class="site-footer">
+        <h2 class="site-footer__title">Контактна інформація</h2>
+ 
+        <address class="site-footer__contacts">
             <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
         </address>
-        <p>
-            <a href="admin.html">Адміністрування</a>
-        </p>
-        <p class="site-footer__copy">
-            &copy; 2026 Світ Подорожей. Усі права захищено.
-        </p>
+ 
+        <nav class="site-footer__nav" aria-label="Навігація в підвалі">
+            <ul class="site-footer__list">
+                <li><a href="index.html" class="site-footer__link">Каталог</a></li>
+                <li><a href="about.html" class="site-footer__link">Про проєкт</a></li>
+                <li><a href="admin.html" class="site-footer__link">Адміністрування</a></li>
+            </ul>
+        </nav>
+ 
+        <p class="site-footer__copy">&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
+ 

@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Про проєкт – Світ Подорожей</title>
     <meta name="description" content="Мета туристичного каталогу, інструкція з використання та поширені запитання.">
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">
         Перейти до основного вмісту
     </a>
-
+ 
     <header class="site-header">
         <p class="site-header__brand">
             <a href="index.html" class="site-header__logo">
@@ -19,55 +20,50 @@
                 Світ Подорожей
             </a>
         </p>
-
+ 
         <nav class="site-nav" aria-label="Основна навігація">
             <ul class="site-nav__list">
                 <li>
                     <a href="index.html" class="site-nav__link">Каталог</a>
                 </li>
                 <li>
-                    <a href="about.html" class="site-nav__link" aria-current="page">
-                        Про проєкт
-                    </a>
+                    <a href="about.html" class="site-nav__link" aria-current="page">Про проєкт</a>
                 </li>
             </ul>
         </nav>
-
+ 
         <search class="site-search">
-            <form action="index.html" method="get" role="search"
-                  class="site-search__form">
-                <label for="search" class="site-search__label">
-                    Пошук напрямку
-                </label>
-                <input id="search"
-                       name="q"
-                       type="search"
-                       class="site-search__input"
-                       placeholder="Пошук країни чи міста..."
-                       maxlength="80">
-                <button type="submit" class="button button--primary">
-                    Знайти
-                </button>
+            <form action="index.html" method="get" role="search" class="site-search__form">
+                <label for="search" class="site-search__label">Пошук напрямку</label>
+                <input
+                    id="search"
+                    name="q"
+                    type="search"
+                    class="site-search__input"
+                    placeholder="Пошук країни чи міста..."
+                    maxlength="80"
+                >
+                <button type="submit" class="button button--primary">Знайти</button>
             </form>
         </search>
     </header>
-
+ 
     <main id="main-content" class="page">
         <h1>Про проєкт</h1>
-
+ 
         <p>
             Каталог «Світ Подорожей» створено з метою зібрати в одному
             місці найбільш актуальну та структуровану інформацію
             про популярні туристичні напрямки для зручного планування
             ваших подорожей.
         </p>
-
+ 
         <section class="about__section"
                  aria-labelledby="instructions-title">
             <h2 id="instructions-title">
                 Як користуватися каталогом
             </h2>
-
+ 
             <ol>
                 <li>
                     Перейдіть на головну сторінку каталогу.
@@ -86,13 +82,13 @@
                 </li>
             </ol>
         </section>
-
+ 
         <section class="about__section"
                  aria-labelledby="features-title">
             <h2 id="features-title">
                 Можливості в наступних роботах
             </h2>
-
+ 
             <ul>
                 <li>
                     Динамічне завантаження турів за допомогою JavaScript.
@@ -109,11 +105,11 @@
                 </li>
             </ul>
         </section>
-
+ 
         <section class="about__section"
                  aria-labelledby="media-title">
             <h2 id="media-title">Відеоогляд напрямку</h2>
-
+ 
             <video class="media-figure"
                    controls
                    width="640"
@@ -124,13 +120,13 @@
                         type="video/webm">
                 <source src="media/15906929_3840_2160_30fps.mp4"
                         type="video/mp4">
-
+ 
                 <track kind="captions"
                        src="media/review.uk.vtt"
                        srclang="uk"
                        label="Українська"
                        default>
-
+ 
                 <p>
                     Ваш браузер не підтримує відтворення відео.
                     <a href="media/15906929_3840_2160_30fps.mp4">
@@ -139,11 +135,11 @@
                 </p>
             </video>
         </section>
-
+ 
         <section class="faq"
                  aria-labelledby="faq-title">
             <h2 id="faq-title">Часті запитання (FAQ)</h2>
-
+ 
             <details class="faq__item" name="faq-accordion">
                 <summary class="faq__question">
                     Чи актуальні ціни в таблицях?
@@ -153,7 +149,7 @@
                     показниках витрат туристів за минулий рік.
                 </p>
             </details>
-
+ 
             <details class="faq__item" name="faq-accordion">
                 <summary class="faq__question">
                     Як додати свій напрямок у каталог?
@@ -163,7 +159,7 @@
                     на головній сторінці (демонстраційний режим).
                 </p>
             </details>
-
+ 
             <details class="faq__item" name="faq-accordion">
                 <summary class="faq__question">
                     Чи потрібна реєстрація?
@@ -175,25 +171,25 @@
             </details>
         </section>
     </main>
-
+ 
     <footer id="contacts" class="site-footer">
-        <h2>Контактна інформація</h2>
-
-        <address>
-            <p>
-                Розробник: Левадний Яків, група ІН-41/1
-            </p>
-            <p>
-                Email:
-                <a href="mailto:yakivlevadniy@gmail.com">
-                    yakivlevadniy@gmail.com
-                </a>
-            </p>
+        <h2 class="site-footer__title">Контактна інформація</h2>
+ 
+        <address class="site-footer__contacts">
+            <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
         </address>
-
-        <p class="site-footer__copy">
-            &copy; 2026 Туристичні напрямки. Усі права захищено.
-        </p>
+ 
+        <nav class="site-footer__nav" aria-label="Навігація в підвалі">
+            <ul class="site-footer__list">
+                <li><a href="index.html" class="site-footer__link">Каталог</a></li>
+                <li><a href="about.html" class="site-footer__link" aria-current="page">Про проєкт</a></li>
+                <li><a href="admin.html" class="site-footer__link">Адміністрування</a></li>
+            </ul>
+        </nav>
+ 
+        <p class="site-footer__copy">&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
+ 

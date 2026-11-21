@@ -10,7 +10,7 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
-
+ 
     <header class="site-header">
         <p class="site-header__brand">
             <a href="index.html" class="site-header__logo">
@@ -18,29 +18,36 @@
                 Світ Подорожей
             </a>
         </p>
-
+ 
         <nav class="site-nav" aria-label="Основна навігація">
             <ul class="site-nav__list">
-                <li><a href="index.html" class="site-nav__link">Каталог</a></li>
-                <li><a href="details.html" class="site-nav__link" aria-current="page">Напрямок</a></li>
-                <li><a href="about.html" class="site-nav__link">Про проєкт</a></li>
+                <li>
+                    <a href="index.html" class="site-nav__link">Каталог</a>
+                </li>
+                <li>
+                    <a href="about.html" class="site-nav__link">Про проєкт</a>
+                </li>
             </ul>
         </nav>
-
+ 
         <search class="site-search">
             <form action="index.html" method="get" role="search" class="site-search__form">
                 <label for="search" class="site-search__label">Пошук напрямку</label>
-                <input id="search" name="q" type="search"
-                       class="site-search__input"
-                       placeholder="Пошук країни чи міста..."
-                       maxlength="80">
+                <input
+                    id="search"
+                    name="q"
+                    type="search"
+                    class="site-search__input"
+                    placeholder="Пошук країни чи міста..."
+                    maxlength="80"
+                >
                 <button type="submit" class="button button--primary">Знайти</button>
             </form>
         </search>
     </header>
-
+ 
     <main id="main-content" class="page">
-
+ 
         <nav class="breadcrumbs" aria-label="Хлібні крихти">
             <ol class="breadcrumbs__list">
                 <li class="breadcrumbs__item">
@@ -51,7 +58,7 @@
                 </li>
             </ol>
         </nav>
-
+ 
         <nav class="toc" aria-label="На цій сторінці">
             <p class="toc__title">На цій сторінці:</p>
             <ul class="toc__list">
@@ -61,30 +68,30 @@
                 <li><a href="#review" class="toc__link">Відгук туриста</a></li>
             </ul>
         </nav>
-
+ 
         <article class="destination">
             <h1 class="destination__title">Кіото, Японія</h1>
-
+ 
             <section id="overview" class="destination__section"
                      aria-labelledby="overview-title">
                 <h2 id="overview-title">Загальний огляд</h2>
-
+ 
                 <figure class="destination__figure">
                     <picture>
                         <source type="image/jpeg"
                                 srcset="images/kyoto-800w.jpg">
-
+ 
                         <img src="images/kyoto-800w.jpg"
                              width="800" height="533"
                              alt="Осінній храм у Кіото на тлі червоних кленів"
                              fetchpriority="high">
                     </picture>
-
+ 
                     <figcaption class="destination__caption">
                         Традиційний японський храм восени, Кіото
                     </figcaption>
                 </figure>
-
+ 
                 <p>
                     <strong>Кіото</strong> — це місто, де оживає історія
                     Японії. Воно відоме своїми численними класичними
@@ -92,7 +99,7 @@
                     палацами, синтоїстськими святилищами та
                     традиційними дерев'яними будинками.
                 </p>
-
+ 
                 <p>
                     Однією з найпопулярніших атракцій є район
                     <em>Гіон</em>, де й досі можна зустріти справжніх
@@ -101,44 +108,44 @@
                     в автентичну японську культуру.
                 </p>
             </section>
-
+ 
             <section id="characteristics" class="destination__section"
                      aria-labelledby="characteristics-title">
-
+ 
                 <h2 id="characteristics-title">Характеристики</h2>
-
+ 
                 <dl class="specs">
                     <dt class="specs__term">Регіон</dt>
                     <dd class="specs__value">Азія</dd>
-
+ 
                     <dt class="specs__term">Денний бюджет</dt>
                     <dd class="specs__value">
                         <data class="specs__price" value="120">120$</data>
                     </dd>
-
+ 
                     <dt class="specs__term">Найкращий сезон</dt>
                     <dd class="specs__value">
                         <time datetime="2027-04">
                             Квітень (цвітіння сакури)
                         </time>
                     </dd>
-
+ 
                     <dt class="specs__term">Статус</dt>
                     <dd class="specs__value">Відкрито для туристів</dd>
                 </dl>
             </section>
-
+ 
             <section id="expenses" class="destination__section"
                      aria-labelledby="expenses-title">
-
+ 
                 <h2 id="expenses-title">Орієнтовні витрати</h2>
-
+ 
                 <table class="data-table">
                     <caption>
                         Орієнтовні витрати на день у Кіото
                         (у доларах США)
                     </caption>
-
+ 
                     <thead>
                         <tr>
                             <th scope="col">Стаття витрат</th>
@@ -146,7 +153,7 @@
                             <th scope="col">Комфорт (стандартний)</th>
                         </tr>
                     </thead>
-
+ 
                     <tbody>
                         <tr>
                             <th scope="row">Проживання</th>
@@ -157,7 +164,7 @@
                                 <data value="80">80$</data>
                             </td>
                         </tr>
-
+ 
                         <tr>
                             <th scope="row">Харчування</th>
                             <td class="data-table__number">
@@ -167,7 +174,7 @@
                                 <data value="50">50$</data>
                             </td>
                         </tr>
-
+ 
                         <tr>
                             <th scope="row">Транспорт і розваги</th>
                             <td class="data-table__number">
@@ -180,35 +187,35 @@
                     </tbody>
                 </table>
             </section>
-
+ 
             <p>
                 <a href="index.html" class="button button--secondary">
                     Повернутися до каталогу
                 </a>
             </p>
         </article>
-
+ 
         <section id="review" class="review" aria-labelledby="review-title">
             <h2 id="review-title">Відгук туриста</h2>
-
+ 
             <p>
                 Поділіться своїми враженнями від подорожі до Кіото.
                 Форма надсилається методом GET, тому введені дані
                 відображатимуться в адресному рядку браузера.
                 Це навчальна демонстрація без збереження відгуків.
             </p>
-
+ 
             <form id="review-form"
                   action="details.html#review"
                   method="get"
                   autocomplete="on"
                   class="form">
-
+ 
                 <p class="form__field">
                     <label for="review-author" class="form__label">
                         Ім'я
                     </label>
-
+ 
                     <input id="review-author"
                            name="authorName"
                            type="text"
@@ -217,12 +224,12 @@
                            minlength="2"
                            maxlength="80">
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="review-email" class="form__label">
                         Електронна пошта
                     </label>
-
+ 
                     <input id="review-email"
                            name="email"
                            type="email"
@@ -231,12 +238,12 @@
                            required
                            maxlength="80">
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="review-phone" class="form__label">
                         Телефон
                     </label>
-
+ 
                     <input id="review-phone"
                            name="phone"
                            type="tel"
@@ -247,15 +254,15 @@
                            pattern="\+380[0-9]{9}"
                            aria-describedby="phone-hint">
                 </p>
-
+ 
                 <p id="phone-hint" class="form__hint">
                     Необов'язково. Формат: +380 і 9 цифр,
                     наприклад +380501112233.
                 </p>
-
+ 
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Оцінка подорожі</legend>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input type="radio" name="rating"
@@ -264,7 +271,7 @@
                             1
                         </label>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input type="radio" name="rating"
@@ -273,7 +280,7 @@
                             2
                         </label>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input type="radio" name="rating"
@@ -282,7 +289,7 @@
                             3
                         </label>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input type="radio" name="rating"
@@ -291,7 +298,7 @@
                             4
                         </label>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input type="radio" name="rating"
@@ -301,19 +308,19 @@
                         </label>
                     </p>
                 </fieldset>
-
+ 
                 <p class="form__field">
                     <label for="trip-type" class="form__label">
                         Тип подорожі
                     </label>
-
+ 
                     <input id="trip-type"
                            name="tripType"
                            type="text"
                            class="form__input"
                            list="trip-types"
                            aria-describedby="trip-hint">
-
+ 
                     <datalist id="trip-types">
                         <option value="Самостійна">
                         <option value="Сімейна">
@@ -321,17 +328,17 @@
                         <option value="Екскурсійна">
                     </datalist>
                 </p>
-
+ 
                 <p id="trip-hint" class="form__hint">
                     Виберіть запропонований тип подорожі
                     або введіть власний.
                 </p>
-
+ 
                 <p class="form__field">
                     <label for="review-comment" class="form__label">
                         Коментар
                     </label>
-
+ 
                     <textarea id="review-comment"
                               name="comment"
                               class="form__input"
@@ -341,12 +348,12 @@
                               cols="40"
                               aria-describedby="comment-hint"></textarea>
                 </p>
-
+ 
                 <p id="comment-hint" class="form__hint">
                     Необов'язково. Якщо залишаєте коментар,
                     введіть від 10 до 500 символів.
                 </p>
-
+ 
                 <p class="form__field">
                     <label class="form__choice">
                         <input id="review-consent"
@@ -358,7 +365,7 @@
                         Погоджуюся з правилами публікації відгуку
                     </label>
                 </p>
-
+ 
                 <p class="form__actions">
                     <button type="submit" class="button button--primary">
                         Надіслати відгук
@@ -366,35 +373,27 @@
                 </p>
             </form>
         </section>
-
+ 
     </main>
-
+ 
     <footer id="contacts" class="site-footer">
-        <h2>Контактна інформація</h2>
-
-        <address>
-            <p>
-                Розробник: Левадний Яків, група ІН-41/1
-            </p>
-            <p>
-                Email:
-                <a href="mailto:yakivlevadniy@gmail.com">
-                    yakivlevadniy@gmail.com
-                </a>
-            </p>
+        <h2 class="site-footer__title">Контактна інформація</h2>
+ 
+        <address class="site-footer__contacts">
+            <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
         </address>
-
-        <nav aria-label="Навігація в підвалі">
+ 
+        <nav class="site-footer__nav" aria-label="Навігація в підвалі">
             <ul class="site-footer__list">
-                <li><a href="index.html">Каталог</a></li>
-                <li><a href="about.html">Про проєкт</a></li>
-                <li><a href="admin.html">Адміністрування</a></li>
+                <li><a href="index.html" class="site-footer__link">Каталог</a></li>
+                <li><a href="about.html" class="site-footer__link">Про проєкт</a></li>
+                <li><a href="admin.html" class="site-footer__link">Адміністрування</a></li>
             </ul>
         </nav>
-
-        <p class="site-footer__copy">
-            &copy; 2026 Туристичні напрямки. Усі права захищено.
-        </p>
+ 
+        <p class="site-footer__copy">&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
+ 

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адміністрування – Світ Подорожей</title>
     <meta name="description" content="Адміністрування каталогу туристичних напрямків.">
+    <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
-
+ 
     <header class="site-header">
         <p class="site-header__brand">
             <a href="index.html" class="site-header__logo">
@@ -17,26 +18,45 @@
                 Світ Подорожей
             </a>
         </p>
-
+ 
         <nav class="site-nav" aria-label="Основна навігація">
             <ul class="site-nav__list">
-                <li><a href="index.html" class="site-nav__link">Каталог</a></li>
-                <li><a href="about.html" class="site-nav__link">Про проєкт</a></li>
+                <li>
+                    <a href="index.html" class="site-nav__link">Каталог</a>
+                </li>
+                <li>
+                    <a href="about.html" class="site-nav__link">Про проєкт</a>
+                </li>
             </ul>
         </nav>
+ 
+        <search class="site-search">
+            <form action="index.html" method="get" role="search" class="site-search__form">
+                <label for="search" class="site-search__label">Пошук напрямку</label>
+                <input
+                    id="search"
+                    name="q"
+                    type="search"
+                    class="site-search__input"
+                    placeholder="Пошук країни чи міста..."
+                    maxlength="80"
+                >
+                <button type="submit" class="button button--primary">Знайти</button>
+            </form>
+        </search>
     </header>
-
+ 
     <main id="main-content" class="page admin">
         <h1>Адміністрування туристичних напрямків</h1>
-
+ 
         <p class="admin__intro">
             Ця сторінка є навчальною імітацією адміністративного інтерфейсу.
             Збереження даних та обмеження доступу потребують серверної частини.
         </p>
-
+ 
         <section class="admin__section" aria-labelledby="catalog-title">
             <h2 id="catalog-title">Напрямки каталогу</h2>
-
+ 
             <div class="table-wrapper">
                 <table class="data-table">
                     <caption>Список туристичних напрямків</caption>
@@ -96,23 +116,23 @@
                 </table>
             </div>
         </section>
-
+ 
         <section class="admin__section" aria-labelledby="add-title">
             <h2 id="add-title">Додати туристичний напрямок</h2>
-
+ 
             <form id="item-form" class="form"
                   action="admin.html" method="get" autocomplete="on">
-
+ 
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Основні дані</legend>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="title">Назва напрямку</label>
                         <input class="form__input" id="title" name="title"
                                type="text" required minlength="3" maxlength="100"
                                autocomplete="off" placeholder="Київ, Україна">
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="category">Регіон</label>
                         <select class="form__input" id="category" name="category" required>
@@ -122,7 +142,7 @@
                             <option value="north-america">Північна Америка</option>
                         </select>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="price">Денний бюджет, $</label>
                         <input class="form__input" id="price" name="price"
@@ -132,7 +152,7 @@
                     <p id="price-hint" class="form__hint">
                         Вкажіть бюджет від 1 до 10000 доларів.
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="addedAt">Дата додавання</label>
                         <input class="form__input" id="addedAt" name="addedAt"
@@ -140,10 +160,10 @@
                                min="2024-01-01" max="2027-12-31">
                     </p>
                 </fieldset>
-
+ 
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Опис і доступність</legend>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="image">Посилання на зображення</label>
                         <input class="form__input" id="image" name="image"
@@ -154,14 +174,14 @@
                     <p id="image-hint" class="form__hint">
                         Необов'язкове поле. Вкажіть повну URL-адресу фотографії.
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__label" for="description">Опис напрямку</label>
                         <textarea class="form__input" id="description"
                                   name="description" required minlength="10"
                                   maxlength="500" rows="4" cols="40"></textarea>
                     </p>
-
+ 
                     <p class="form__field">
                         <label class="form__choice">
                             <input class="form__checkbox" id="inStock"
@@ -170,7 +190,7 @@
                         </label>
                     </p>
                 </fieldset>
-
+ 
                 <p class="form__field">
                     <label class="form__label" for="item-code">Код напрямку</label>
                     <input class="form__input" id="item-code" name="itemCode"
@@ -182,7 +202,7 @@
                     Формат: дві великі латинські літери,
                     дефіс і три цифри, наприклад JP-001.
                 </p>
-
+ 
                 <p class="form__actions">
                     <button class="button button--primary" type="submit">Додати</button>
                     <button class="button button--secondary" type="reset">Очистити</button>
@@ -190,22 +210,25 @@
             </form>
         </section>
     </main>
-
+ 
     <footer id="contacts" class="site-footer">
-        <h2>Контактна інформація</h2>
-        <address>
+        <h2 class="site-footer__title">Контактна інформація</h2>
+ 
+        <address class="site-footer__contacts">
             <p>Розробник: Левадний Яків, група ІН-41/1</p>
+            <p>Email: <a href="mailto:yakivlevadniy@gmail.com">yakivlevadniy@gmail.com</a></p>
         </address>
-        <nav aria-label="Навігація в підвалі">
+ 
+        <nav class="site-footer__nav" aria-label="Навігація в підвалі">
             <ul class="site-footer__list">
-                <li><a href="index.html">Каталог</a></li>
-                <li><a href="about.html">Про проєкт</a></li>
-                <li><a href="admin.html" aria-current="page">Адміністрування</a></li>
+                <li><a href="index.html" class="site-footer__link">Каталог</a></li>
+                <li><a href="about.html" class="site-footer__link">Про проєкт</a></li>
+                <li><a href="admin.html" class="site-footer__link" aria-current="page">Адміністрування</a></li>
             </ul>
         </nav>
-        <p class="site-footer__copy">
-            &copy; 2026 Світ Подорожей. Усі права захищено.
-        </p>
+ 
+        <p class="site-footer__copy">&copy; 2026 Світ Подорожей. Усі права захищено.</p>
     </footer>
 </body>
 </html>
+ 
