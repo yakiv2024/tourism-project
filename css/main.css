@@ -1171,3 +1171,84 @@
     }
 }
  
+/* ЛР6. Сторінка деталей */
+@layer components {
+ 
+    /* «На цій сторінці»: заголовок і посилання в рядок із перенесенням */
+    .toc {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: var(--space-s) var(--space-m);
+    }
+ 
+    .toc__title {
+        margin: 0;
+    }
+ 
+    .toc__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s) var(--space-m);
+        padding: 0;
+        list-style: none;
+    }
+ 
+    /* Фото й характеристики поруч, переносяться на вузькому екрані */
+    .destination__layout {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: var(--space-l);
+        margin-block-end: var(--space-l);
+    }
+ 
+    .destination__layout .destination__figure {
+        flex: 3 1 24rem;
+        min-inline-size: 0;
+        margin: 0;
+    }
+ 
+    .destination__specs {
+        flex: 2 1 18rem;
+        min-inline-size: 0;
+        margin: 0;
+    }
+ 
+    .destination__specs h2 {
+        margin-block-start: 0;
+    }
+ 
+    /* Пари «назва – значення» в рядок з однаковою шириною назв */
+    .specs {
+        max-width: none;
+        margin: 0;
+    }
+ 
+    .specs__row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: var(--space-xs) var(--space-m);
+        padding-block: var(--space-s);
+        border-block-end: 1px solid var(--color-row);
+    }
+ 
+    .specs__row:last-child {
+        border-block-end: 0;
+    }
+ 
+    .specs__term {
+        flex: 0 0 9rem;
+        margin: 0;
+    }
+ 
+    .specs__value {
+        flex: 1 1 10rem;
+        min-inline-size: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}
+ 
