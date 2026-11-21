@@ -273,50 +273,13 @@
                 <fieldset class="form__fieldset">
                     <legend class="form__legend">Оцінка подорожі</legend>
  
-                    <p class="form__field">
-                        <label class="form__choice">
-                            <input type="radio" name="rating"
-                                   class="form__radio"
-                                   value="1" required>
-                            1
-                        </label>
-                    </p>
- 
-                    <p class="form__field">
-                        <label class="form__choice">
-                            <input type="radio" name="rating"
-                                   class="form__radio"
-                                   value="2">
-                            2
-                        </label>
-                    </p>
- 
-                    <p class="form__field">
-                        <label class="form__choice">
-                            <input type="radio" name="rating"
-                                   class="form__radio"
-                                   value="3">
-                            3
-                        </label>
-                    </p>
- 
-                    <p class="form__field">
-                        <label class="form__choice">
-                            <input type="radio" name="rating"
-                                   class="form__radio"
-                                   value="4">
-                            4
-                        </label>
-                    </p>
- 
-                    <p class="form__field">
-                        <label class="form__choice">
-                            <input type="radio" name="rating"
-                                   class="form__radio"
-                                   value="5">
-                            5
-                        </label>
-                    </p>
+                    <div class="form__choices">
+                        <label class="form__choice"><input type="radio" name="rating" class="form__radio" value="1" required> 1</label>
+                        <label class="form__choice"><input type="radio" name="rating" class="form__radio" value="2"> 2</label>
+                        <label class="form__choice"><input type="radio" name="rating" class="form__radio" value="3"> 3</label>
+                        <label class="form__choice"><input type="radio" name="rating" class="form__radio" value="4"> 4</label>
+                        <label class="form__choice"><input type="radio" name="rating" class="form__radio" value="5"> 5</label>
+                    </div>
                 </fieldset>
  
                 <p class="form__field">
@@ -379,6 +342,9 @@
                 <p class="form__actions">
                     <button type="submit" class="button button--primary">
                         Надіслати відгук
+                    </button>
+                    <button type="reset" class="button button--secondary">
+                        Очистити
                     </button>
                 </p>
             </form>
