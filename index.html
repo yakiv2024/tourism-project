@@ -50,31 +50,46 @@
         <section id="catalog" class="catalog" aria-labelledby="catalog-title">
             <h1 id="catalog-title">Туристичні напрямки</h1>
  
-            <nav class="catalog-filters" aria-label="Категорії каталогу">
-                <ul class="catalog-filters__list">
-                    <li>
-                        <a href="#catalog" class="catalog-filters__link" aria-current="page">Всі напрямки</a>
-                    </li>
-                    <li>
-                        <a href="#catalog" class="catalog-filters__link">Європа</a>
-                    </li>
-                    <li>
-                        <a href="#catalog" class="catalog-filters__link">Азія</a>
-                    </li>
-                    <li>
-                        <a href="#catalog" class="catalog-filters__link">Північна Америка</a>
-                    </li>
-                </ul>
-            </nav>
+            <form class="filters" action="index.html#catalog" method="get">
+                <p class="filters__field filters__field--search">
+                    <label class="filters__label" for="catalog-q">Пошук у каталозі</label>
+                    <input class="filters__control" id="catalog-q" name="q" type="search" maxlength="80">
+                </p>
  
-            <form action="#catalog" method="get" class="catalog-sort">
-                <label for="sort" class="catalog-sort__label">Сортувати</label>
-                <select id="sort" name="sort" class="catalog-sort__select">
-                    <option value="name" selected>за назвою</option>
-                    <option value="price-asc">за бюджетом: спочатку дешевші</option>
-                    <option value="price-desc">за бюджетом: спочатку дорожчі</option>
-                </select>
-                <button type="submit" class="button button--secondary">Застосувати</button>
+                <p class="filters__field filters__field--sort">
+                    <label class="filters__label" for="sort">Сортувати</label>
+                    <select class="filters__control" id="sort" name="sort">
+                        <option value="name" selected>за назвою</option>
+                        <option value="price-asc">за бюджетом: спочатку дешевші</option>
+                        <option value="price-desc">за бюджетом: спочатку дорожчі</option>
+                    </select>
+                </p>
+ 
+                <fieldset class="filters__categories">
+                    <legend class="filters__legend">Регіон</legend>
+                    <div class="chips">
+                        <label class="chip">
+                            <input class="chip__input" type="radio" name="category" value="" checked>
+                            Усі напрямки
+                        </label>
+                        <label class="chip">
+                            <input class="chip__input" type="radio" name="category" value="europe">
+                            Європа
+                        </label>
+                        <label class="chip">
+                            <input class="chip__input" type="radio" name="category" value="asia">
+                            Азія
+                        </label>
+                        <label class="chip">
+                            <input class="chip__input" type="radio" name="category" value="north-america">
+                            Північна Америка
+                        </label>
+                    </div>
+                </fieldset>
+ 
+                <p class="filters__actions">
+                    <button type="submit" class="button button--primary">Застосувати</button>
+                </p>
             </form>
  
             <ul class="catalog__list">

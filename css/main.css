@@ -995,3 +995,109 @@
         margin: 0;
     }
 }
+
+/* ЛР6. Панель фільтрів і чипи категорій */
+@layer components {
+ 
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        gap: var(--space-m) var(--space-l);
+        margin-block: var(--space-m) var(--space-l);
+        padding: var(--space-m);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-m);
+    }
+ 
+    .filters__field {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        margin: 0;
+        min-inline-size: 0;
+    }
+ 
+    .filters__field--search {
+        flex: 2 1 16rem;
+    }
+ 
+    .filters__field--sort {
+        flex: 1 1 14rem;
+    }
+ 
+    .filters__label,
+    .filters__legend {
+        font-weight: 600;
+    }
+ 
+    .filters__control {
+        padding: var(--space-s);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-s);
+        background: var(--color-surface);
+        color: var(--color-text);
+        min-block-size: 2.75rem;
+        min-inline-size: 0;
+    }
+ 
+    .filters__categories {
+        flex: 1 1 40rem;
+        min-inline-size: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+ 
+    .filters__legend {
+        margin-block-end: var(--space-s);
+        padding: 0;
+    }
+ 
+    .filters__actions {
+        margin: 0 0 0 auto;
+    }
+ 
+    /* Чипи: перемикачі в рядок із перенесенням */
+    .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-s);
+    }
+ 
+    .chip {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        min-block-size: 2.5rem;
+        padding: var(--space-xs) var(--space-m);
+        border: 1px solid var(--color-accent);
+        border-radius: 999px;
+        color: var(--color-accent);
+        font-weight: 600;
+        cursor: pointer;
+    }
+ 
+    .chip:hover {
+        background: var(--color-row);
+    }
+ 
+    .chip__input {
+        position: absolute;
+        inset: 0;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+ 
+    .chip:has(.chip__input:checked) {
+        background: var(--color-accent);
+        color: var(--color-on-accent);
+    }
+ 
+    .chip:has(.chip__input:focus-visible) {
+        outline: 3px solid var(--color-focus);
+        outline-offset: 2px;
+    }
+}
