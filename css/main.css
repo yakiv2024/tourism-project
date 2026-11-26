@@ -1070,17 +1070,8 @@
 /* ЛР6. Картка каталогу та ряди карток */
 @layer components {
  
-    /* Перелік карток: ряди з перенесенням (у ЛР7 буде замінено сіткою Grid) */
-    .catalog__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-l);
-    }
- 
+    /* ЛР7: ряди Flexbox замінено сіткою Grid – див. блок «ЛР7. Сітка каталогу» */
     .catalog__item {
-        display: flex;
-        flex: 1 1 16rem;
-        width: auto;
         min-inline-size: 0;
         margin: 0;
     }
@@ -1299,6 +1290,51 @@
        тому не виходить за її межі й не дає прокрутки сторінки на 320px */
     .table-wrapper {
         position: relative;
+    }
+}
+ 
+/* ЛР7. Сітка каталогу */
+@layer components {
+ 
+    /* Стільки стовпців, скільки вміщується; картка не вужча за 20rem
+       (на екрані, вужчому за 20rem, – на всю ширину завдяки min()) */
+    .catalog__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+        gap: var(--space-l);
+    }
+ 
+    /* Декоративна смуга над сіткою: явно на весь рядок, тому не займає клітинку картки */
+    .catalog__list::before {
+        content: "";
+        grid-column: 1 / -1;
+        block-size: 4px;
+        border-radius: var(--radius-s);
+        background: linear-gradient(90deg, var(--color-accent), var(--color-focus));
+    }
+ 
+    /* Порожній стан: повідомлення на всю ширину сітки */
+    .catalog__empty {
+        grid-column: 1 / -1;
+        padding: var(--space-l);
+        border: 2px dashed var(--color-border);
+        border-radius: var(--radius-m);
+        background: var(--color-surface);
+        color: var(--color-text-muted);
+        text-align: center;
+        font-weight: 600;
+    }
+ 
+    /* Якщо нічого не знайдено, декоративна смуга не потрібна */
+    .catalog__list:has(.catalog__empty)::before {
+        display: none;
+    }
+ 
+    /* Однакові пропорції фото 16 : 9 незалежно від вихідного зображення */
+    .card__media img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
     }
 }
  
