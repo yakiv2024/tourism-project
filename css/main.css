@@ -870,41 +870,6 @@
     .admin textarea.form__input {
         min-height: 7rem;
     }
- 
-    /* Вузькі екрани */
-    @media (max-width: 600px) {
-        .site-header,
-        .page,
-        .site-footer {
-            padding: var(--space-m);
-        }
- 
-        .catalog__item {
-            width: 100%;
-            margin-right: 0;
-        }
- 
-        .form,
-        .about__section,
-        .panel,
-        .admin__section {
-            padding: var(--space-m);
-        }
- 
-        .admin .form__fieldset,
-        .admin-edit .form__fieldset {
-            padding: var(--space-m);
-        }
- 
-        .data-table {
-            font-size: 0.85rem;
-        }
- 
-        .data-table th,
-        .data-table td {
-            padding: var(--space-xs);
-        }
-    }
 }
  
 /* 4. Допоміжні класи */
@@ -1291,9 +1256,49 @@
         margin: 0;
     }
 }
-
+ 
+/* ЛР7. Каркас сторінки засобами Grid (шар components) */
 @layer components {
-    .review .form {
+ 
+    /* Шапка, основний вміст і підвал – іменовані області однієї сітки.
+       Середній рядок 1fr забирає вільну висоту, тому підвал притиснутий донизу */
+    body {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        min-block-size: 100dvh;
+    }
+ 
+    .site-header {
+        grid-area: header;
+    }
+ 
+    .page {
+        grid-area: main;
+        inline-size: 100%;
+        max-inline-size: 75rem;
         margin-inline: auto;
+        padding: clamp(var(--space-m), 3vw, var(--space-l));
+    }
+ 
+    .site-footer {
+        grid-area: footer;
+    }
+ 
+    /* Відступи без медіазапиту: на вузькому екрані менші, на широкому – більші */
+    .site-header,
+    .site-footer {
+        padding-inline: clamp(var(--space-m), 3vw, var(--space-l));
+    }
+ 
+    /* Прихований текст у кнопках таблиці позиціонується відносно обгортки,
+       тому не виходить за її межі й не дає прокрутки сторінки на 320px */
+    .table-wrapper {
+        position: relative;
     }
 }
+ 
