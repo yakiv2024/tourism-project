@@ -1147,23 +1147,9 @@
         list-style: none;
     }
  
-    /* Фото й характеристики поруч, переносяться на вузькому екрані */
-    .destination__layout {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        gap: var(--space-l);
-        margin-block-end: var(--space-l);
-    }
- 
-    .destination__layout .destination__figure {
-        flex: 3 1 24rem;
-        min-inline-size: 0;
-        margin: 0;
-    }
- 
+    /* Фото й характеристики: у ЛР7 – сітка, див. блок «ЛР7. Сторінка деталей» */
+    .destination__layout .destination__figure,
     .destination__specs {
-        flex: 2 1 18rem;
         min-inline-size: 0;
         margin: 0;
     }
@@ -1172,36 +1158,10 @@
         margin-block-start: 0;
     }
  
-    /* Пари «назва – значення» в рядок з однаковою шириною назв */
+    /* Пари «назва – значення»: у ЛР7 – сітка, див. блок «ЛР7. Сторінка деталей» */
     .specs {
         max-width: none;
         margin: 0;
-    }
- 
-    .specs__row {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: var(--space-xs) var(--space-m);
-        padding-block: var(--space-s);
-        border-block-end: 1px solid var(--color-row);
-    }
- 
-    .specs__row:last-child {
-        border-block-end: 0;
-    }
- 
-    .specs__term {
-        flex: 0 0 9rem;
-        margin: 0;
-    }
- 
-    .specs__value {
-        flex: 1 1 10rem;
-        min-inline-size: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
     }
 }
  
@@ -1380,6 +1340,75 @@
     /* Єдина картка в результатах не розтягується на весь рядок */
     .catalog__item:only-child {
         max-inline-size: 28rem;
+    }
+}
+ 
+/* ЛР7. Сторінка деталей */
+@layer components {
+ 
+    /* Стаття – сітка з двох стовпців з auto-fit: фото й характеристики поруч,
+       на вузькому екрані стовпець один і вони стають один під одним */
+    .destination {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+        gap: var(--space-l);
+        align-items: start;
+    }
+ 
+    /* Обгортка не створює власного блока: фото й характеристики стають елементами сітки статті */
+    .destination__layout {
+        display: contents;
+    }
+ 
+    /* Заголовок, огляд, таблиця витрат і кнопка повернення – на всю ширину */
+    .destination__title,
+    .destination > .destination__section,
+    .destination__back {
+        grid-column: 1 / -1;
+        margin: 0;
+    }
+ 
+    .destination__specs h2 {
+        margin-block-start: 0;
+    }
+ 
+    /* Секція з таблицею може звужуватися, а широка таблиця прокручується всередині неї */
+    .destination__section:has(.data-table) {
+        min-inline-size: 0;
+        overflow-x: auto;
+    }
+ 
+    /* Список визначень: назви в першому стовпці, значення в другому */
+    .specs {
+        display: grid;
+        grid-template-columns: max-content minmax(0, 1fr);
+        column-gap: var(--space-l);
+    }
+ 
+    /* Кожен рядок-обгортка <div> бере обидва стовпці від .specs,
+       тому всі назви й значення вирівняні однаково */
+    .specs__row {
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        align-items: baseline;
+        padding: var(--space-s);
+        border-block-end: 1px solid var(--color-row);
+    }
+ 
+    .specs__row:nth-child(even) {
+        background: var(--color-row);
+    }
+ 
+    .specs__row:last-child {
+        border-block-end: 0;
+    }
+ 
+    .specs__term,
+    .specs__value {
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
 }
  
