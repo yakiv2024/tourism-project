@@ -1076,11 +1076,8 @@
         margin: 0;
     }
  
-    /* Картка: гнучкий стовпчик, нижня частина притиснута донизу */
+    /* Картка: у ЛР7 стала підсіткою – див. блок «ЛР7. Підсітка картки» */
     .card {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
         min-inline-size: 0;
     }
  
@@ -1335,6 +1332,54 @@
         height: auto;
         aspect-ratio: 16 / 9;
         object-fit: cover;
+    }
+}
+ 
+/* ЛР7. Підсітка картки */
+@layer components {
+ 
+    /* Картка має 5 частин в окремих рядках: назва, фото, опис, регіон із сезоном,
+       денний бюджет. <li> займає 5 рядків сітки каталогу й передає їх картці */
+    .catalog__item {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: 0;
+    }
+ 
+    /* <article> теж займає 5 рядків і бере доріжки від <li> */
+    .card {
+        display: grid;
+        grid-row: span 5;
+        grid-template-rows: subgrid;
+        row-gap: var(--space-s);
+    }
+ 
+    .card > * {
+        margin: 0;
+    }
+ 
+    /* Обгортка нижньої частини не створює власного блока: рядок із регіоном
+       і рядок із бюджетом стають окремими рядками підсітки й вирівнюються в усіх картках */
+    .card__footer {
+        display: contents;
+    }
+ 
+    .card__tags {
+        align-content: start;
+        margin: 0;
+        padding-block-start: var(--space-s);
+        border-block-start: 1px solid var(--color-row);
+    }
+ 
+    .card__meta {
+        margin: 0;
+        align-self: end;
+    }
+ 
+    /* Єдина картка в результатах не розтягується на весь рядок */
+    .catalog__item:only-child {
+        max-inline-size: 28rem;
     }
 }
  
