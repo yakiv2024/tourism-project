@@ -1453,4 +1453,10 @@
         margin-block-end: var(--space-xs);
     }
 }
- 
+
+/* ЛР8. Атрибут hidden перемагає display компонентів, бо шар utilities останній */
+@layer utilities {
+    [hidden] {
+        display: none;
+    }
+}
