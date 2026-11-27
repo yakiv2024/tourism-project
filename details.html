@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Детальна інформація про Кіото: опис, бюджет, характеристики та відгуки туристів.">
-    <title>Кіото, Японія – Світ Подорожей</title>
+    <meta name="description" content="Детальна інформація про туристичний напрямок: опис, бюджет, характеристики, клімат і відгуки туристів.">
+    <title>Напрямок – Світ Подорожей</title>
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="js/details-page.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Перейти до основного вмісту</a>
@@ -53,9 +54,7 @@
                 <li class="breadcrumbs__item">
                     <a href="index.html" class="breadcrumbs__link">Каталог</a>
                 </li>
-                <li class="breadcrumbs__item" aria-current="page">
-                    Кіото, Японія
-                </li>
+                <li class="breadcrumbs__item" aria-current="page">Напрямок</li>
             </ol>
         </nav>
  
@@ -64,152 +63,66 @@
             <ul class="toc__list">
                 <li><a href="#characteristics" class="toc__link">Характеристики</a></li>
                 <li><a href="#overview" class="toc__link">Загальний огляд</a></li>
-                <li><a href="#expenses" class="toc__link">Орієнтовні витрати</a></li>
+                <li><a href="#climate" class="toc__link">Клімат</a></li>
                 <li><a href="#review" class="toc__link">Відгук туриста</a></li>
             </ul>
         </nav>
  
-        <article class="destination">
-            <h1 class="destination__title">Кіото, Японія</h1>
+        <div id="details-root" class="details-root">
+            <noscript>
+                <p>Сторінка напрямку формується засобами JavaScript. Увімкніть JavaScript у браузері.</p>
+            </noscript>
+        </div>
  
-            <div class="destination__layout">
-                <figure class="destination__figure">
-                    <picture>
-                        <source type="image/jpeg"
-                                srcset="images/kyoto-800w.jpg">
+        <template id="details-template">
+            <article class="destination">
+                <h1 class="destination__title"></h1>
  
-                        <img src="images/kyoto-800w.jpg"
-                             width="800" height="533"
-                             alt="Осінній храм у Кіото на тлі червоних кленів"
-                             fetchpriority="high">
-                    </picture>
+                <div class="destination__layout">
+                    <figure class="destination__figure">
+                        <img class="destination__image" src="images/placeholder.svg" width="800" height="533" alt="" fetchpriority="high">
+                        <figcaption class="destination__caption"></figcaption>
+                    </figure>
  
-                    <figcaption class="destination__caption">
-                        Традиційний японський храм восени, Кіото
-                    </figcaption>
-                </figure>
+                    <section id="characteristics" class="destination__section destination__specs"
+                             aria-labelledby="characteristics-title">
+                        <h2 id="characteristics-title">Характеристики</h2>
+                        <dl class="specs"></dl>
+                    </section>
+                </div>
  
-                <section id="characteristics" class="destination__section destination__specs"
-                         aria-labelledby="characteristics-title">
- 
-                    <h2 id="characteristics-title">Характеристики</h2>
- 
-                    <dl class="specs">
-                        <div class="specs__row">
-                            <dt class="specs__term">Регіон</dt>
-                            <dd class="specs__value">Азія</dd>
-                        </div>
- 
-                        <div class="specs__row">
-                            <dt class="specs__term">Денний бюджет</dt>
-                            <dd class="specs__value">
-                                <data class="specs__price" value="120">120$</data>
-                            </dd>
-                        </div>
- 
-                        <div class="specs__row">
-                            <dt class="specs__term">Найкращий сезон</dt>
-                            <dd class="specs__value">
-                                <time datetime="2027-04">
-                                    Квітень (цвітіння сакури)
-                                </time>
-                            </dd>
-                        </div>
- 
-                        <div class="specs__row">
-                            <dt class="specs__term">Статус</dt>
-                            <dd class="specs__value">Відкрито для туристів</dd>
-                        </div>
-                    </dl>
+                <section id="overview" class="destination__section" aria-labelledby="overview-title">
+                    <h2 id="overview-title">Загальний огляд</h2>
+                    <p class="destination__description"></p>
                 </section>
-            </div>
  
-            <section id="overview" class="destination__section"
-                     aria-labelledby="overview-title">
-                <h2 id="overview-title">Загальний огляд</h2>
+                <section id="climate" class="destination__section" aria-labelledby="climate-title">
+                    <h2 id="climate-title">Клімат за сезонами</h2>
  
-                <p>
-                    <strong>Кіото</strong> — це місто, де оживає історія
-                    Японії. Воно відоме своїми численними класичними
-                    буддійськими храмами, садами, імператорськими
-                    палацами, синтоїстськими святилищами та
-                    традиційними дерев'яними будинками.
+                    <table class="data-table">
+                        <caption></caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Місяць</th>
+                                <th scope="col">Середня температура</th>
+                                <th scope="col">Опади за місяць</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </section>
+ 
+                <p class="destination__back">
+                    <a href="index.html" class="button button--secondary">Повернутися до каталогу</a>
                 </p>
- 
-                <p>
-                    Однією з найпопулярніших атракцій є район
-                    <em>Гіон</em>, де й досі можна зустріти справжніх
-                    гейш. Це ідеальне місце для тих, хто шукає
-                    гармонію, красу природи та прагне зануритися
-                    в автентичну японську культуру.
-                </p>
-            </section>
- 
-            <section id="expenses" class="destination__section"
-                     aria-labelledby="expenses-title">
- 
-                <h2 id="expenses-title">Орієнтовні витрати</h2>
- 
-                <table class="data-table">
-                    <caption>
-                        Орієнтовні витрати на день у Кіото
-                        (у доларах США)
-                    </caption>
- 
-                    <thead>
-                        <tr>
-                            <th scope="col">Стаття витрат</th>
-                            <th scope="col">Економ (бюджетний)</th>
-                            <th scope="col">Комфорт (стандартний)</th>
-                        </tr>
-                    </thead>
- 
-                    <tbody>
-                        <tr>
-                            <th scope="row">Проживання</th>
-                            <td class="data-table__number">
-                                <data value="30">30$</data>
-                            </td>
-                            <td class="data-table__number">
-                                <data value="80">80$</data>
-                            </td>
-                        </tr>
- 
-                        <tr>
-                            <th scope="row">Харчування</th>
-                            <td class="data-table__number">
-                                <data value="20">20$</data>
-                            </td>
-                            <td class="data-table__number">
-                                <data value="50">50$</data>
-                            </td>
-                        </tr>
- 
-                        <tr>
-                            <th scope="row">Транспорт і розваги</th>
-                            <td class="data-table__number">
-                                <data value="10">10$</data>
-                            </td>
-                            <td class="data-table__number">
-                                <data value="30">30$</data>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
- 
-            <p class="destination__back">
-                <a href="index.html" class="button button--secondary">
-                    Повернутися до каталогу
-                </a>
-            </p>
-        </article>
+            </article>
+        </template>
  
         <section id="review" class="review" aria-labelledby="review-title">
             <h2 id="review-title">Відгук туриста</h2>
  
             <p>
-                Поділіться своїми враженнями від подорожі до Кіото.
+                Поділіться своїми враженнями від подорожі до цього напрямку.
                 Форма надсилається методом GET, тому введені дані
                 відображатимуться в адресному рядку браузера.
                 Це навчальна демонстрація без збереження відгуків.
