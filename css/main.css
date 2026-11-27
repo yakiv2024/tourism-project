@@ -1412,3 +1412,45 @@
     }
 }
  
+/* ЛР7. Сітка полів форм */
+@layer components {
+ 
+    /* Форма й кожна група <fieldset> – окремі сітки: поля стають у кілька стовпців,
+       на вузькому екрані – в один. Порядок клітинок збігається з розміткою */
+    .form,
+    .form__fieldset {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+        gap: var(--space-s) var(--space-l);
+        align-items: start;
+    }
+ 
+    .admin .form,
+    .admin-edit .form,
+    .review .form {
+        max-width: 60rem;
+    }
+ 
+    .form__field,
+    .form__hint,
+    .form__fieldset {
+        margin: 0;
+    }
+ 
+    /* На всю ширину: групи полів, опис, прапорці, перемикачі, підказки й кнопки.
+       Підказка займає окремий рядок одразу під рядком зі своїм полем */
+    .form > .form__fieldset,
+    .form__field:has(textarea),
+    .form__field:has(.form__checkbox),
+    .form__hint,
+    .form__choices,
+    .form__actions {
+        grid-column: 1 / -1;
+    }
+ 
+    /* <legend> не стає клітинкою: браузер малює його в рамці групи як заголовок */
+    .form__legend {
+        margin-block-end: var(--space-xs);
+    }
+}
+ 
